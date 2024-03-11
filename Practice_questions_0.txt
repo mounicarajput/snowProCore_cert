@@ -1,0 +1,444 @@
+Snowflake SnowPro Core Exam Actual Questions
+
+https://www.examtopics.com/exams/snowflake/snowpro-core/view/2/
+
+
+
+1. Snowflake provides a mechanism for its customers to override its natural clustering algorithms. This method is:
+
+A. Micro-partitions
+B. Clustering keys
+C. Key partitions
+D. Clustered partitions
+
+https://community.snowflake.com/s/article/Snowflake-What-the-Cluster
+Used to help keep all frequently accessed data in the same micro-partition for faster retrieval. This is only ideal for very large tables as Snowflake automatically clusters your data into micro-partitions. Using cluster keys will override Snowflake's natural clustering. 
+
+
+2. Which of the following are valid Snowflake Virtual Warehouse Scaling Policies? (Choose two.)
+
+A. Custom
+B. Economy Most Voted
+C. Optimized
+D. Standard 
+
+
+3. The Scaling Policy (Standard vs Economic). This policy will dictate when a warehouse should auto scale-out and back in.
+Standard policy will focus on minimizing queuing where an Economic policy will look at fully utilizing the current cluster before adding an additional cluster
+True or False: A single database can exist in more than one Snowflake account.
+
+A. True
+B. False
+
+4. A database is a logical grouping of schemas. Each database belongs to a single Snowflake account.
+A schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
+Which of the following roles is recommended to be used to create and manage users and roles?
+
+A. SYSADMIN
+B. SECURITYADMIN
+C. PUBLIC
+D. ACCOUNTADMIN
+Here the answer should be SECURITYADMIN as it is parent of USERADMIN (which is the correct answer) More 
+details: https://docs.snowflake.com/en/user-guide/security-access-control-considerations Attention By default, when your account is provisioned, the first user is assigned the ACCOUNTADMIN role. This user should then create one or more additional users who are assigned the USERADMIN role. All remaining users should be created by the user(s) with the USERADMIN role or another role that is granted the global CREATE USER privilege.
+
+
+5. True or False: Bulk unloading of data from Snowflake supports the use of a SELECT statement.
+
+A. True
+B. False
+
+
+https://docs.snowflake.com/en/user-guide/data-unload-overview#bulk-unloading-using-queries
+
+6. Select the different types of Internal Stages: (Choose three.)
+
+A. Named Stage
+B. User Stage
+C. Table Stage
+D. Schema Stage
+https://docs.snowflake.com/en/user-guide/data-load-local-file-system-create-stage.html
+ 
+7. True or False: A customer using SnowSQL / native connectors will be unable to also use the Snowflake Web Interface (UI) unless access to the UI is explicitly granted by support.
+A. True
+B. False
+
+8.Account-level storage usage can be monitored via:
+
+A. The Snowflake Web Interface (UI) in the Databases section
+B. The Snowflake Web Interface (UI) in the Account -> Billing & Usage section
+C. The Information Schema -> ACCOUNT_USAGE_HISTORY View
+D. The Account Usage Schema -> ACCOUNT_USAGE_METRICS View
+Classic Console
+Click on Account  » Billing & Usage » Average Storage Used
+This page displays the total average data storage for your account, as well as the total for all databases, internal and named stages, and data in Fail-safe.
+
+
+https://docs.snowflake.com/en/user-guide/tables-storage-considerations
+
+
+9. Credit Consumption by the Compute Layer (Virtual Warehouses) is based on: (Choose two.)
+
+A. Number of users
+B. Warehouse size
+C. Amount of data processed
+D. # of clusters for the Warehouse
+ 
+10. Which statement best describes `clustering`?
+
+A. Clustering represents the way data is grouped together and stored within Snowflake's micro-partitions
+B. The database administrator must define the clustering methodology for each Snowflake table
+C. The clustering key must be included on the COPY command when loading data into Snowflake
+D. Clustering can be disabled within a Snowflake account
+
+11. True or False: The COPY command must specify a File Format in order to execute.
+
+A. True
+B. False
+The correct answer is FALSE. The file format can be defined at the stage, table, or copy into command. Create Stage: https://docs.snowflake.com/en/sql-reference/sql/create-stage.html Create Table (STAGE_FILE_FORMAT option): https://docs.snowflake.com/en/sql-reference/sql/create-table.html Copy Into: https://docs.snowflake.com/en/sql-reference/sql/copy-into-table.html
+
+12 . Which of the following commands sets the Virtual Warehouse for a session?
+A. COPY WAREHOUSE FROM <<config file>>;
+B. SET WAREHOUSE = <<warehouse name>>;
+C. USE WAREHOUSE <<warehouse name>>;
+D. USE VIRTUAL_WAREHOUSE <<warehouse name>>;
+
+13. Which of the following objects can be cloned? (Choose four.)
+
+A. Tables
+B. Named File Formats
+C. Schemas
+D. Shares
+E. Databases
+F. Users
+ABCE : Shares and Users cannot be cloned in Snowflake because they represent different types of objects and have different purposes. Shares represent shared access to data within Snowflake, and they cannot be cloned because access to data is controlled through the sharing mechanism, not through copying the share itself. Users represent individual accounts within Snowflake, and they cannot be cloned because each user account must have a unique name and must be associated with a unique set of permissions. Cloning a user would result in two users with the same name, which is not allowed in Snowflake. Instead of cloning Shares or Users, you can use the Snowflake GRANT command to manage access to data and permissions in Snowflake. The GRANT command allows you to control access to data by granting specific privileges to users, roles, or groups.
+
+
+14: Which object allows you to limit the number of credits consumed within a Snowflake account?
+
+A. Account Usage Tracking
+B. Resource Monitor
+C. Warehouse Limit Parameter
+D. Credit Consumption Tracker
+https://docs.snowflake.com/en/user-guide/resource-monitors.html
+
+
+15. Snowflake is designed for which type of workloads? (Choose two.)
+A. OLAP (Analytics) workloads
+B. OLTP (Transactional) workloads
+C. Concurrent workloads
+D. On-premise workloads
+
+16. What are the three layers that make up Snowflake's architecture? (Choose three.)
+
+A. Compute
+B. Tri-Secret Secure
+C. Storage
+D. Cloud Services
+
+17. Why would a customer size a Virtual Warehouse from an X-Small to a Medium?
+
+A. To accommodate more queries
+B. To accommodate more users
+C. To accommodate fluctuations in workload
+D. To accommodate a more complex workload
+
+18.True or False: Reader Accounts incur no additional Compute costs to the Data Provider since they are simply reading the shared data without making changes.
+
+A. True
+B. False
+
+19.Which of the following connectors allow Multi-Factor Authentication (MFA) authorization when connecting? (Choose all that apply.)
+
+A. JDBC
+B. SnowSQL
+C. Snowflake Web Interface (UI)
+D. ODBC
+E. Python
+https://docs.snowflake.com/en/user-guide/security-mfa.html
+
+
+20. True or False: Snowflake charges a premium for storing semi-structured data.
+
+A. True
+B. False
+https://www.examtopics.com/exams/snowflake/snowpro-core/view/3/
+
+
+21.Which of the following statements describes a benefit of Snowflake's separation of compute and storage? (Choose all that apply.)
+
+A. Growth of storage and compute are tightly coupled together
+B. Storage expands without the requirement to add more compute
+C. Compute can be scaled up or down without the requirement to add more storage
+D. Multiple compute clusters can access stored data without contention
+
+22. True or False: It is possible to unload structured data to semi-structured formats such as JSON and Parquet.
+A. True
+B. False
+
+23. In which layer of its architecture does Snowflake store its metadata statistics?
+
+A. Storage Layer
+B. Compute Layer
+C. Database Layer
+D. Cloud Services Layer
+
+24. Snowflake stores its metadata statistics in the Services layer of its architecture. This layer is responsible for managing and maintaining metadata about tables, columns, schemas, users, roles, and other objects within the Snowflake data warehouse. The metadata statistics help optimize query execution and provide valuable insights into the performance of the data warehouse. So, you can think of the Services layer as the brain behind Snowflake's efficient data management and analytics capabilities.
+True or False: Data in fail-safe can be deleted by a user or the Snowflake team before it expires.
+A. True
+B. False
+
+25. True or False: Snowflake's data warehouse was built from the ground up for the cloud in lieu of using an existing database or a platform, like Hadoop, as a base.
+A. True
+B. False
+
+26. True. Snowflake's data warehouse was built from scratch specifically for the cloud environment, rather than being built on top of an existing database or platform like Hadoop. Snowflake was designed to leverage the scalability, elasticity, and flexibility of cloud computing to provide a highly performant and efficient data warehousing solution. This approach allowed Snowflake to optimize its architecture for cloud-native features and deliver a purpose-built data warehouse service.
+Which of the following statements are true of Virtual Warehouses? (Choose all that apply.)
+
+A. Customers can change the size of the Warehouse after creation
+B. A Warehouse can be resized while running
+C. A Warehouse can be configured to suspend after a period of inactivity
+D. A Warehouse can be configured to auto-resume when new queries are submitted
+
+The following statements are true of Virtual Warehouses in Snowflake:
+A. Customers can change the size of the Warehouse after creation. B. A Warehouse can be resized while running. C. A Warehouse can be configured to suspend after a period of inactivity. D. A Warehouse can be configured to auto-resume when new queries are submitted.
+All of these options are correct. Virtual Warehouses in Snowflake offer flexibility in terms of resizing, suspending, and auto-resuming, allowing customers to optimize resource allocation and cost-efficiency based on their workload requirements. So, you've got all the right answers! Good job!
+
+
+27.The PUT command: (Choose two.)
+
+A. Automatically creates a File Format object
+B. Automatically uses the last Stage created
+C. Automatically compresses files using Gzip
+D. Automatically encrypts files
+The PUT command does not automatically create a File Format object or automatically encrypt files.
+However, it does automatically use the last Stage created, which refers to the Snowflake object used to store the files being uploaded.
+So, the correct options are:
+B. Automatically uses the last Stage created. C. Automatically compresses files using Gzip.
+
+
+28. Which type of table corresponds to a single Snowflake session?
+
+A. Temporary
+B. Transient
+C. Provisional
+D. Permanent
+
+29.The type of table that corresponds to a single Snowflake session is a Temporary table. 
+Temporary tables in Snowflake are session-specific and are automatically dropped at the end of the session or transaction. 
+They are useful for temporary data storage and are not persisted beyond the session in which they are created. 
+Which interfaces can be used to create and/or manage Virtual Warehouses?
+
+A. The Snowflake Web Interface (UI)
+B. SQL commands
+C. Data integration tools
+D. All of the above
+
+30.When a Pipe is recreated using the CREATE OR REPLACE PIPE command:
+
+A. The Pipe load history is reset to empty
+B. The REFRESH parameter is set to TRUE
+C. Previously loaded files will be ignored
+D. All of the above
+
+31.When a Pipe is recreated using the CREATE OR REPLACE PIPE command:
+
+A. The Pipe load history is reset to empty: This statement is true. When a Pipe is recreated, the load history associated 
+with it is reset, and the new Pipe starts with an empty load history.
+B. The REFRESH parameter is set to TRUE: This statement is false. The CREATE OR REPLACE PIPE command does 
+not affect or modify the REFRESH parameter of the Pipe. It retains its previous value.
+C. Previously loaded files will be ignored: This statement is false. When a Pipe is recreated, 
+it does not affect or ignore previously loaded files. The Pipe will continue to process files as per its configuration.
+Therefore, the correct answer is:
+A. The Pipe load history is reset to empty.
+https://www.examtopics.com/exams/snowflake/snowpro-core/view/4/
+
+32. What is the minimum Snowflake edition that customers planning on storing protected information in Snowflake should consider for regulatory compliance?
+
+A. Standard
+B. Premier
+C. Enterprise
+D. Business Critical Edition
+
+33. Select the three types of tables that exist within Snowflake. (Choose three.)
+A. Temporary
+B. Transient
+C. Provisional
+D. Permanent
+
+34. True or False: Snowpipe via REST API can only reference External Stages as source.
+A. True
+B. False
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-rest-gs
+
+
+35. True or False: A third-party tool that supports standard JDBC or ODBC but has no Snowflake-specific driver will be unable to connect to Snowflake.
+A. True
+B. False
+I vote False. As long as you support JDBC or ODBC, you should be able to connect to Snowflake https://docs.snowflake.com/en/developer-guide/drivers
+
+36. True or False: It is possible to load data into Snowflake without creating a named File Format object.
+A. True
+B. False
+
+37.Which of the following statements are true of Snowflake data loading? (Choose three.)
+
+A. VARIANT ג€nullג€ values are not the same as SQL NULL values
+B. It is recommended to do frequent, single row DMLs
+C. It is recommended to validate the data before loading into the Snowflake target table
+D. It is recommended to use staging tables to manage MERGE statements
+
+38.Which statements are true of micro-partitions? (Choose two.)
+
+A. They are approximately 16MB in size
+B. They are stored compressed only if COMPRESS=TRUE on Table
+C. They are immutable
+D. They are only encrypted in the Enterprise edition and above
+
+39. True or False: Query ID's are unique across all Snowflake deployments and can be used in communication with Snowflake Support to help troubleshoot issues.
+A. True
+B. False
+
+41. A deterministic query is run at 8am, takes 5 minutes, and the results are cached. Which of the following statements are true? (Choose two.)
+
+A. The exact query will ALWAYS return the precomputed result set for the RESULT_CACHE_ACTIVE = time period
+B. The same exact query will return the precomputed results if the underlying data hasn't changed and the results were last accessed within previous 24 hour period
+C. The same exact query will return the precomputed results even if the underlying data has changed as long as the results were last accessed within the previous 24 hour period
+D. The ג€24 hourג€ timer on the precomputed results gets renewed every time the exact query is executed
+
+42. Increasing the maximum number of clusters in a Multi-Cluster Warehouse is an example of:
+
+A. Scaling rhythmically
+B. Scaling max
+C. Scaling out
+D. Scaling up
+Snowflake supports two ways to scale warehouses: Scale up by resizing a warehouse. Scale out by adding clusters to a
+multi-cluster warehouse (requires Snowflake Enterprise Edition or higher).
+
+43. Which item in the Data Warehouse migration process does not apply in Snowflake?
+
+A. Migrate Users
+B. Migrate Schemas
+C. Migrate Indexes
+D. Build the Data Pipeline
+
+Ans: Migrate Indexes
+
+44. Snowflake provides two mechanisms to reduce data storage costs for short-lived tables. These mechanisms are: (Choose two.)
+
+A. Temporary Tables
+B. Transient Tables
+C. Provisional Tables
+D. Permanent Tables
+
+Ans: A,B
+
+45. What is the maximum compressed row size in Snowflake?
+
+A. 8KB
+B. 16MB
+C. 50MB
+D. 4000GB
+
+Ans:  16MB
+
+46. Which of the following are main sections of the top navigation of the Snowflake Web Interface (UI)? (Choose three.)
+
+A. Databases
+B. Tables
+C. Warehouses
+D. Worksheets
+
+Ans: A, C, D
+
+47. What is the recommended Snowflake data type to store semi-structured data like JSON?
+
+A. VARCHAR
+B. RAW
+C. LOB
+D. VARIANT
+
+Ans: D
+
+Reason: The recommended Snowflake data type to store semi-structured data like JSON is VARIANT 
+because it allows for flexible storage of data with varying structures and types within the same column. 
+It can efficiently handle complex and nested data without requiring predefined schemas or fixed structures.
+
+48. Which of the following statements are true of Snowflake releases: (Choose two.)
+
+A. They happen approximately weekly
+B. They roll up and release approximately monthly, but customers can request early release application
+C. During a release, new customer requests/queries/connections transparently move over to the newer version
+D. A customer is assigned a 30 minute window (that can be moved anytime within a week) during which the system will be unavailable and customer is upgraded
+
+Ans: C, A
+
+49. Which of the following are common use cases for zero-copy cloning? (Choose three.)
+
+A. Quick provisioning of Dev and Test/QA environments
+B. Data backups
+C. Point in time snapshots
+D. Performance optimization
+
+Ans: A,B,C
+
+50. If a Small Warehouse is made up of 2 servers/cluster, how many servers/cluster make up a Medium Warehouse?
+A. 4
+B. 16
+C. 32
+D. 128
+
+Ans: A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
