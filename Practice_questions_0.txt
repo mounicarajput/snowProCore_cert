@@ -389,6 +389,127 @@ D. 128
 
 Ans: A
 
+51. True or False: When a data share is established between a Data Provider and a Data Consumer, the Data Consumer can extend that data share to other Data
+Consumers.
+A. True
+B. False
+
+
+Ans: B (Consumer can't re-shared DB object to another consumer.)
+https://docs.snowflake.com/en/user-guide/data-share-consumers.html
+
+52: Which is true of Snowflake network policies? A Snowflake network policy: (Choose two.)
+A. Is available to all Snowflake Editions
+B. Is only available to customers with Business Critical Edition
+C. Restricts or enables access to specific IP addresses
+D. Is activated using an ג€ALTER DATABASEג€ command
+
+Ans: A, C
+https://docs.snowflake.com/en/sql-reference/sql/create-network-policy
+
+53. True or False: Snowflake charges additional fees to Data Providers for each Share they create.
+A. True
+B. False
+
+Ans: B
+
+According to the documentation sited:
+
+"The costs for sharing data with Snowflake are minimal and straightforward. 
+Data providers simply pay Snowflake for the data they store, and 
+data consumers pay for the compute resources their queries consume."
+
+54. Query results are stored in the Result Cache for how long after they are last accessed, assuming no data changes have occurred?
+A. 1 Hour
+B. 3 Hours
+C. 12 hours
+D. 24 hours
+
+Ans: D
+
+55. A role is created and owns 2 tables. This role is then dropped. Who will now own the two tables? 
+A. The tables are now orphaned
+B. The user that deleted the role
+C. SYSADMIN
+D. The assumed role that dropped the role
+
+Ans: D (re-check)
+
+56. Which of the following connectors are available in the Downloads section of the Snowflake Web Interface (UI)? (Choose two.)
+A. SnowSQL
+B. ODBC
+C. R
+D. HIVE
+
+Ans: A, B
+
+57. Which of the following DML commands isn't supported by Snowflake?
+A. UPSERT
+B. MERGE
+C. UPDATE
+D. TRUNCATE TABLE
+
+Ans: A (re-check)
+
+58. Which of the following statements is true of zero-copy cloning?
+
+A. Zero-copy clones increase storage costs as cloning the table requires storing its data twice
+B. All zero-copy clone objects inherit the privileges of their original objects
+C. Zero-copy cloning is licensed as an additional Snowflake feature
+D. At the instance/instant a clone is created, all micro-partitions in the original table and the clone are fully shared
+
+Ans: D
+
+59. True or False: When a user creates a role, they are initially assigned ownership of the role and they maintain ownership until it is transferred to another user.
+A. True
+B. False
+
+Ans: B
+
+60. The Query History in the Snowflake Web Interface (UI) is kept for approximately:
+A. 60 minutes
+B. 24 hours
+C. 14 days
+D. 30 days
+E. 1 year
+
+Ans: C
+
+61: To run a Multi-Cluster Warehouse in auto-scale mode, a user would:
+A. Configure the Maximum Clusters setting to ג€Auto-Scaleג€
+B. Set the Warehouse type to ג€Autoג€
+C. Set the Minimum Clusters and Maximum Clusters settings to the same value
+D. Set the Minimum Clusters and Maximum Clusters settings to the different values
+
+Ans: D
+
+62.Which of the following terms best describes Snowflake's database architecture?
+A. Columnar shared nothing
+B. Shared disk
+C. Multi-cluster, shared data
+D. Cloud-native shared memory
+
+Ans: C
+
+Built from the ground up for the cloud, Snowflake’s unique multi-cluster shared 
+data architecture delivers the performance, scale, elasticity, and concurrency today’s organizations require.
+https://www.snowflake.com/product/architecture/
+
+63. Which of the following are options when creating a Virtual Warehouse? (Choose two.)
+A. Auto-drop
+B. Auto-resize
+C. Auto-resume
+D. Auto-suspend
+
+Ans: C,D
+
+The answer is correct. When creating a warehouse, you could assign auto-suspend time 
+from 5 minutes to never and you could tick the auto-resume function 
+( it is ticked by default). The function means that if you stock use the warehouse, 
+the warehouse will be suspended by your assigned auto suspended time and auto-resume when you start to query
+
+64.
+
 
 
 
