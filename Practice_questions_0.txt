@@ -508,7 +508,69 @@ from 5 minutes to never and you could tick the auto-resume function
 ( it is ticked by default). The function means that if you stock use the warehouse, 
 the warehouse will be suspended by your assigned auto suspended time and auto-resume when you start to query
 
-64.
+64. Fail-safe is unavailable on which table types? (Choose two.)
+A. Temporary
+B. Transient
+C. Provisional
+D. Permanent
+
+Ans: A,B
+
+65. A Virtual Warehouse's auto-suspend and auto-resume settings apply to:
+A. The primary cluster in the Virtual Warehouse
+B. The entire Virtual Warehouse
+C. The database the Virtual Warehouse resides in
+D. The queries currently being run by the Virtual Warehouse
+
+Ans: B
+
+66. Which of the following objects is not covered by Time Travel?
+A. Tables
+B. Schemas
+C. Databases
+D. Stages
+
+Ans: D
+
+67. True or False: Micro-partition metadata enables some operations to be completed without requiring Compute.
+A. True
+B. False
+
+Ans: A
+
+68. Which of the following commands are not blocking operations? (Choose two.)
+A. UPDATE
+B. INSERT
+C. MERGE
+D. COPY
+
+69. Which of the following commands are not blocking operations? (Choose two.)
+A. UPDATE
+B. INSERT
+C. MERGE
+D. COPY
+
+Ans: BD
+
+70. Which of the following is true of Snowpipe via REST API? (Choose two.)
+A. You can only use it on Internal Stages
+B. All COPY INTO options are available during pipe creation
+C. Snowflake automatically manages the compute required to execute the Pipe's COPY INTO commands
+D. Snowpipe keeps track of which files it has loaded
+
+Ans CD, (RE-check)
+
+71. Snowflake recommends, as a minimum, that all users with the following role(s) should be enrolled in Multi-Factor Authentication (MFA):
+A. SECURITYADMIN, ACCOUNTADMIN, PUBLIC, SYSADMIN
+B. SECURITYADMIN, ACCOUNTADMIN, SYSADMIN
+C. SECURITYADMIN, ACCOUNTADMIN
+D. ACCOUNTADMIN
+
+Ans: D
+
+At a minimum, Snowflake strongly recommends that all users with the ACCOUNTADMIN role be required to use MFA.
+
+https://www.examtopics.com/exams/snowflake/snowpro-core/view/8/
 
 
 
