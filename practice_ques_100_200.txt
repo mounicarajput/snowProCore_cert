@@ -1,0 +1,12 @@
+101. Which of the following statements is true of Snowflake micro-partitioning?
+A. Micro-partitioning has been known to introduce data skew
+B. Micro-partitioning: requires a partitioning schema to be defined up front
+C. Micro-partitioning is transparently completed using the ordering that occurs when the data is inserted/loaded
+D. Micro-partitioning can be disabled within a Snowflake account
+
+Ans. C
+
+Snowflake's micro-partitioning is transparent to users and is completed automatically as data is 
+inserted or loaded into tables. It leverages clustering keys to organize data within each micro-partition, 
+enhancing query performance without the need for users to define partitioning schemas upfront.
+
