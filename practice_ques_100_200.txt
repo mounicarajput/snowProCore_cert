@@ -10,3 +10,77 @@ Snowflake's micro-partitioning is transparent to users and is completed automati
 inserted or loaded into tables. It leverages clustering keys to organize data within each micro-partition, 
 enhancing query performance without the need for users to define partitioning schemas upfront.
 
+102. True or False: Snowflake bills for a minimum of five minutes each time a Virtual Warehouse is started.
+A. True
+B. False
+
+Ans: B
+
+It bills for minimum 1 minute.
+
+103. When scaling up Virtual Warehouses by increasing Virtual Warehouse t-shirt size, you are primarily scaling for improved:
+A. Concurrency
+B. Performance
+
+Ans: B
+
+104. As a best practice, clustering keys should only be defined on tables of which minimum size?
+A. Multi-Kilobyte (KB) Range
+B. Multi-Megabyte (MB) Range
+C. Multi-Gigabyte (GB) Range
+D. Multi-Terabyte (TB) Range
+
+Ans: D
+
+Considerations for Choosing Clustering for a Table
+Whether you want faster response times or lower overall costs, 
+clustering is best for a table that meets all of the following criteria:
+The table contains a large number of micro-partitions. Typically, 
+this means that the table contains multiple terabytes (TB) of data.
+
+105. How a Snowpipe charges calculated?
+A. Per-second/per Warehouse size
+B. Per-second/per-core granularity
+C. Number of Pipes in account
+D. Total storage bucket size
+
+Ans: B
+
+Snowpipe’s serverless compute model, users can initiate any size load without managing a virtual warehouse
+
+106. True or False: A Snowflake account is charged for data stored in both Internal and External Stages.
+A. True
+B. False
+
+Ans: B
+
+107. True or False: When active, a Pipe requires a dedicated Virtual Warehouse to execute.
+A. True
+B. False
+
+Ans: B
+
+108. True or False: Snowflake supports federated authentication in all editions.
+A. True
+B. False
+
+Ans: A
+
+Get the answer by searching federated authentication 
+from https://docs.snowflake.com/en/user-guide/admin-security.html
+
+109. True or False: When a new Snowflake object is created, it is automatically owned by the user who created it.
+A. True
+B. False
+
+Ans: B
+
+Any objects created after the command is issued are owned by the role in use when the object is created.
+https://docs.snowflake.com/en/sql-reference/sql/grant-ownership#
+
+110. True or False: A Virtual Warehouse consumes Snowflake credits even when inactive.
+A. True
+B. False
+
+Ans:  A
+
