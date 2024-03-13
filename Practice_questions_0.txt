@@ -570,8 +570,104 @@ Ans: D
 
 At a minimum, Snowflake strongly recommends that all users with the ACCOUNTADMIN role be required to use MFA.
 
-https://www.examtopics.com/exams/snowflake/snowpro-core/view/8/
+72. When can a Virtual Warehouse start running queries?
+A. 12am-5am
+B. Only during administrator defined time slots
+C. When its provisioning is complete
+D. After replication
 
+Ans: C
+
+its C as the warehouse start executing the query after the provisioning. 
+there is not specific time slot and no provision when an accountadmin specify a 
+time window as long as the warehouse is running and the user have right privilege
+
+73. True or False: Users are able to see the result sets of queries executed by other users that share their same role.
+A. True
+B. False
+
+Ans: B
+A user cannot view the result set from a query that another user executed. 
+This behavior is intentional. For security reasons, only the user 
+who executed a query can access the query results.
+
+
+74. True or False: The user has to specify which cluster a query will run on in a multi-cluster Warehouse.
+A. True
+B. False
+
+Ans: B
+A user has to select a WAREHOUSE not a specific cluster within the warehouse.
+
+75. True or False: Pipes can be suspended and resumed.
+A. True
+B. False
+
+Ans: A
+
+https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro.html#pausing-or-resuming-pipes
+Pausing or Resuming Pipes
+In addition to the pipe owner, a role that has the following minimum permissions can pause or resume the pipe
+
+76. Which of the following languages can be used to implement Snowflake User Defined Functions (UDFs)? (Choose two.)
+A. Java
+B. Javascript
+C. SQL
+D. Python
+
+Ans : ABCD
+
+https://docs.snowflake.com/en/developer-guide/udf/udf-overview
+
+77. When should you consider disabling auto-suspend for a Virtual Warehouse? (Choose two.)
+A. When users will be using compute at different times throughout a 24/7 period
+B. When managing a steady workload
+C. When the compute must be available with no delay or lag time
+D. When you do not want to have to manually turn on the Warehouse each time a user needs it
+
+Ans: BC
+
+You might want to consider disabling auto-suspend for a warehouse if:
+You have a heavy, steady workload for the warehouse.
+You require the warehouse to be available with no delay or lag time. 
+Warehouse provisioning is generally very fast (e.g. 1 or 2 seconds); 
+however, depending on the size of the warehouse and the availability of 
+compute resources to provision, it can take longer.
+
+78. Which of the following are valid approaches to loading data into a Snowflake table? (Choose all that apply.)
+A. Bulk copy from an External Stage
+B. Continuous load using Snowpipe REST API
+C. The Snowflake Web Interface (UI) data loading wizard
+D. Bulk copy from an Internal Stage
+
+Ans: ABCD
+
+ABCD are correct, data can be loaded into snowflake table from internal stage using bulk copying.
+
+79. If auto-suspend is enabled for a Virtual Warehouse, the Warehouse is automatically suspended when:
+A. All Snowflakes sessions using the Warehouse are terminated.
+B. The last query using the Warehouse completes.
+C. There are no users logged into Snowflake.
+D. The Warehouse is inactive for a specified period of time.
+
+Ans. D
+
+https://docs.snowflake.com/en/user-guide/warehouses-overview.html#auto-suspension-and-auto-resumption
+
+80. True or False: Multi-Factor Authentication (MFA) in Snowflake is only supported in conjunction with Single Sign-On (SSO).
+A. True
+B. False
+
+Multi-Factor Authentication (MFA) in Snowflake is not only supported in 
+conjunction with Single Sign-On (SSO). MFA can be used independently of SSO.
+
+81. The number of queries that a Virtual Warehouse can concurrently process is determined by (Choose two.):
+A. The complexity of each query
+B. The CONCURRENT_QUERY_LIMIT parameter set on the Snowflake account
+C. The size of the data required for each query
+D. The tool that is executing the query.
+
+Ans. AC
 
 
 
