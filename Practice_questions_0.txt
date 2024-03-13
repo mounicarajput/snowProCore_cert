@@ -669,6 +669,197 @@ D. The tool that is executing the query.
 
 Ans. AC
 
+82. Which of the following statements are true of VALIDATION_MODE in Snowflake? (Choose two.)
+A. The VALIDATION_MODE option is used when creating an Internal Stage
+B. VALIDATION_MODE=RETURN_ALL_ERRORS is a parameter of the COPY command
+C. The VALIDATION_MODE option will validate data to be loaded by the COPY statement while completing the load and will return the rows that could not be loaded without error
+D. The VALIDATION_MODE option will validate data to be loaded by the COPY statement without completing the load and will return possible errors
+
+Ans. BD
+
+he VALIDATION_MODE copy option instructs a COPY statement to validate the 
+data to be loaded and return results based on the validation option specified.
+No data is loaded when this copy option is specified. For more information about the copy option, see COPY INTO <table>.
+
+https://docs.snowflake.com/en/user-guide/data-load-bulk-ts#step-2-validating-the-data-load
+
+83. What privileges are required to create a task?
+A. The GLOBAL privilege CREATE TASK is required to create a new task.
+B. Tasks are created at the Application level and can only be created by the Account Admin role.
+C. Many Snowflake DDLs are metadata operations only, and CREATE TASK DDL can be executed without virtual warehouse requirement or task specific grants.
+D. The role must have access to the target schema and the CREATE TASK privilege on the schema itself.
+
+Ans: D
+
+The role must have access to the target schema and the CREATE TASK 
+privilege on the schema itself: The role executing the CREATE TASK statement 
+must have access privileges on the schema where the task will be created. 
+This includes having the necessary privileges to create objects within the schema. 
+Typically, the role needs the CREATE TASK privilege granted on the specific schema.
+
+84. What are the three things customer want most from their enterprise data warehouse solution? (Choose three.)
+A. On-premise availability
+B. Simplicity
+C. Open source based
+D. Concurrency
+E. Performance
+
+Ans: BDE
+
+85. True or False: Some queries can be answered through the metadata cache and do not require an active Virtual Warehouse.
+A. True
+B. False
+
+Ans: A
+
+Metadata queries can be done as metadata is stored in the services layer 
+and does not require the compute layer to spin up a vm to access the storage layer.
+
+86. When scaling out by adding clusters to a multi-cluster warehouse, you are primarily scaling for improved:
+A. Concurrency
+B. Performance
+
+Ans: A
+
+87. What is the minimum Snowflake edition that provides data sharing?
+A. Standard
+B. Premier
+C. Enterprise
+D. Business Critical Edition
+
+Ans. A
+
+Data sharing is possible in the Standard Edition also.
+VPS (Virtual Private Snowflake) does not support Secure Data 
+Sharing due to the current limitations against sharing data across regions.
+Standard and Enterprise Editions support Secure Data Sharing with the usual caveats.
+
+88.True or False: Each worksheet in the Snowflake Web Interface (UI) can be associated with different roles, databases, schemas, and Virtual Warehouses.
+A. True
+B. False
+
+Ans: A
+
+89. True or False: You can query the files in an External Stage directly without having to load the data into a table.
+A. True
+B. False
+
+Ans. A
+
+Snowflake supports using standard SQL to query data files located in an internal 
+(i.e. Snowflake) stage or named external (Amazon S3, Google Cloud Storage, or Microsoft Azure) stage. 
+This can be useful for inspecting/viewing the contents of the staged files, particularly before loading or after unloading data.
+
+90.The FLATTEN function is used to query which type of data in Snowflake?
+A. Structured data
+B. Semi-structured data
+C. Both of the above
+D. None of the above
+
+Ans. B
+
+91. True or False: An active warehouse is required to run a COPY INTO statement.
+A. True
+B. False
+
+Ans: A
+COPY INTO table basically rights data into Micro Partition. 
+To access the micro partition it requires a active warehouse to pass thru right. 
+To access the storage it should pass thru the warehouse. it should be active. 
+even if its suspended, upon receiving a Query the warehouse will resume and come into active to execute the query.
+
+92. True or False: AWS Private Link provides a secure connection from the Customer's on-premise data center to the Snowflake.
+A. True
+B. False
+
+Ans: B
+
+AWS Private Link is a service that enables you to access services over a 
+private connection from your Amazon VPC (Virtual Private Cloud) without using public IPs.
+While it provides a secure connection to AWS services, it doesn't extend the connection 
+to on-premise data centers directly. It is focused on connecting within the AWS environment.
+
+93.True or False: Snowflake's Global Services Layer gathers and maintains statistics on all columns in all micro-partitions.
+A. True
+B. False
+
+Ans. B. False
+
+Snowflake's Global Services Layer doesn't gather and maintain statistics on all 
+columns in all micro-partitions. Instead, it collects and maintains metadata and 
+statistics for query optimization purposes. While it does collect some statistics, 
+it's not on every column in every micro-partition.
+
+94. True or False: It is best practice to define a clustering key on every table.
+A. True
+B. False
+
+Ans: B
+
+95. Which of the following statements is true of Snowflake?
+A. It was built specifically for the cloud
+B. It was built as an on-premises solution and then ported to the cloud
+C. It was designed as a hybrid database to allow customers to store data either on premises or in the cloud
+D. It was built for Hadoop architecture
+E. It's based on an Oracle Architecture
+
+Ans: A
+
+96. What is the minimum Snowflake edition that provides multi-cluster warehouses and up to 90 days of Time Travel?
+A. Standard
+B. Premier
+C. Enterprise
+D. Business Critical Edition
+
+Ans: C
+Standard Offer Timetravel up to 1 day. Enterprise + edition offer up to 90 days.
+
+97. How many shares can be consumed by a single Data Consumer?
+A. 1
+B. 10
+C. 100, but can be increased by contacting support
+D. Unlimited
+
+Ans: D
+
+98. What is the lowest Snowflake edition that offers Time Travel up to 90 days?
+A. Standard Edition
+B. Premier Edition
+C. Enterprise Edition
+D. Business Critical Edition
+
+Ans: C
+
+99. Which of the following statements are true about Schemas in Snowflake? (Choose two.)
+A. A Schema may contain one or more Databases
+B. A Database may contain one or more Schemas
+C. A Schema is a logical grouping of Database Objects
+D. Each Schema is contained within a Warehouse
+
+Ans: BC
+
+100. True or False: You can resize a Virtual Warehouse while queries are running.
+A. True
+B. False
+
+Ans: A
+
+101. What is the most granular object that the Time Travel retention period can be defined on?
+A. Account
+B. Database
+C. Schema
+D. Table
+
+Ans: D
+Time Travel retention periods can be defined at the table level in Snowflake, 
+allowing for granular control over how far back in time data can be recovered.
+
+
+
+
+
+
+
 
 
 
