@@ -249,12 +249,194 @@ hardware failures by automatically replicating data across multiple storage devi
 within the Snowflake system. This redundancy ensures high availability and durability 
 of the data, regardless of the table type.
 
+131.What are two ways to create and manage Data Shares in Snowflake? (Choose two.)
+A. Via the Snowflake Web Interface (UI)
+B. Via the DATA_SHARE=TRUE parameter
+C. Via SQL commands
+D. Via Virtual Warehouses
+
+Ans: AC
+
+132.True or False: Fail-safe can be disabled within a Snowflake account.
+A. True
+B. False
+
+Ans: B
+
+133. True or False: It is possible for a user to run a query against the query result cache without requiring an active Warehouse.
+A. True
+B. False
+
+Ans: A
+
+Query result cache is all about fetching the data from cloud services 
+layer and saving the cost by not running the virtual warehouse.
+
+134. True or False: When Snowflake is configured to use Single Sign-On (SSO), Snowflake receives the usernames and credentials from the SSO service and loads them into the customer's Snowflake account.
+A. True
+B. False
+
+Ans: B
+
+No. it does not save any credentials in an Account. Purpose of Federated and 
+SSO is to authenticate the User and pass the authorization to SSO/Snowflake.
+
+135. Which of the following are best practices for loading data into Snowflake? (Choose three.)
+A. Aim to produce data files that are between 100 MB and 250 MB in size, compressed.
+B. Load data from files in a cloud storage service in a different region or cloud platform from the service or region containing the Snowflake account, to save on cost.
+C. Enclose fields that contain delimiter characters in single or double quotes.
+D. Split large files into a greater number of smaller files to distribute the load among the compute resources in an active warehouse.
+E. When planning which warehouse(s) to use for data loading, start with the largest warehouse possible.
+F. Partition the staged data into large folders with random paths, allowing Snowflake to determine the best way to load each file.
+
+Ans: ACD
+
+136. Which Snowflake feature is used for both querying and restoring data?
+A. Cluster keys
+B. Time Travel
+C. Fail-safe
+D. Cloning
+
+Ans: B
+Querying, cloning, and restoring historical data in tables, schemas, and databases for up to 90 days through Snowflake Time Travel.
+
+137. What do the terms scale up and scale out refer to in Snowflake? (Choose two.)
+A. Scaling out adds clusters of the same size to a virtual warehouse to handle more concurrent queries.
+B. Scaling out adds clusters of varying sizes to a virtual warehouse.
+C. Scaling out adds additional database servers to an existing running cluster to handle more concurrent queries.
+D. Snowflake recommends using both scaling up and scaling out to handle more concurrent queries.
+E. Scaling up resizes a virtual warehouse so it can handle more complex workloads.
+F. Scaling up adds additional database servers to an existing running cluster to handle larger workloads.
+
+Ans: AE
+
+Scaling out involves adding more clusters (or nodes) to a virtual warehouse to 
+increase its capacity for handling concurrent queries. Scaling up, on the other hand, 
+involves increasing the size or capacity of existing clusters within a virtual warehouse 
+to handle more complex workloads or larger queries.
+
+138. What is the minimum Snowflake edition that has column-level security enabled?
+A. Standard
+B. Enterprise
+C. Business Critical
+D. Virtual Private Snowflake
+
+Ans: B
+
+139. What parameter controls if the Virtual Warehouse starts immediately after the CREATE WAREHOUSE statement?
+A. INITIALLY_SUSPENDED = TRUE/FALSE
+B. START_AFTER_CREATE = TRUE/FALSE
+C. START_THE = 60 // (seconds from now)
+D. START_TIME = CURRENT_DATE()
+
+Ans: A
+
+140. When cloning a database, what is cloned with the database? (Choose two.)
+A. Privileges on the database
+B. Existing child objects within the database
+C. Future child objects within the database
+D. Privileges on the schemas within the database
+E. Only schemas and tables within the database
+
+Ans: BD
+
+141. Which of the following describes the Snowflake Cloud Services layer?
+A. Coordinates activities in the Snowflake account
+B. Executes queries submitted by the Snowflake account users
+C. Manages quotas on the Snowflake account storage
+D. Manages the virtual warehouse cache to speed up queries
+
+Ans: A
+
+A. Coordinates activities in the Snowflake account - CLOUD SERVICE LAYER
+B. Executes queries submitted by the Snowflake account users - COMPUTE LAYER
+C. Manages quotas on the Snowflake account storage - STORAGE LAYER
+D. Manages the virtual warehouse cache to speed up queries - COMPUTE LAYER
 
 
+142. What is the maximum total Continuous Data Protection (CDP) charges incurred for a temporary table?
+A. 30 days
+B. 7 days
+C. 48 hours
+D. 24 hours
+Ans: D
 
+143. When reviewing a query profile, what is a symptom that a query is too large to fit into the memory?
+A. A single join node uses more than 50% of the query time
+B. Partitions scanned is equal to partitions total
+C. An AggregateOperator node is present
+D. The query is spilling to remote storage
 
+Ans: D
 
+144. What type of query benefits the MOST from search optimization?
+A. A query that uses only disjunction (i.e., OR) predicates
+B. A query that includes analytical expressions
+C. A query that uses equality predicates or predicates that use IN
+D. A query that filters on semi-structured data types
 
+Ans: C
+
+145. What transformations are supported in a CREATE PIPE ... AS COPY `¦ FROM (`¦) statement? (Choose two.)
+A. Data can be filtered by an optional WHERE clause.
+B. Incoming data can be joined with other tables.
+C. Columns can be reordered.
+D. Columns can be omitted.
+E. Row level access can be defined.
+
+Ans: CD
+
+146. Which of the following are characteristics of Snowflake virtual warehouses? (Choose two.)
+A. Auto-resume applies only to the last warehouse that was started in a multi-cluster warehouse.
+B. The ability to auto-suspend a warehouse is only available in the Enterprise edition or above.
+C. SnowSQL supports both a configuration file and a command line option for specifying a default warehouse.
+D. A user cannot specify a default warehouse when using the ODBC driver.
+E. The default virtual warehouse size can be changed at any time.
+ 
+Ans: CE
+147. Which command should be used to load data from a file, located in an external stage, into a table in Snowflake?
+A. INSERT
+B. PUT
+C. GET
+D. COPY
+Ans: D
+
+148. The Snowflake Cloud Data Platform is described as having which of the following architectures?
+A. Shared-disk
+B. Shared-nothing
+C. Multi-cluster shared data
+D. Serverless query engine
+Ans: C
+
+149. Which of the following is a data tokenization integration partner?
+A. Protegrity
+B. Tableau
+C. DBeaver
+D. SAP
+
+Ans: A
+
+The following partners facilitate external tokenization in Snowflake. 
+To use these partner integrations, follow the instructions in the partner 
+documentation or contact the partner to begin the configuration process:
+
+ALTR
+Baffle
+Fortanix
+MicroFocus CyberRes Voltage
+Protegrity
+Privacera
+SecuPI
+Skyflow
+
+150.What versions of Snowflake should be used to manage compliance with Personal Identifiable Information (PII) requirements? (Choose two.)
+A. Custom Edition
+B. Virtual Private Snowflake
+C. Business Critical Edition
+D. Standard Edition
+E. Enterprise Edition
+
+Ans: BC
 
 
 
