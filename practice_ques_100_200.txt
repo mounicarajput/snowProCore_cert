@@ -84,3 +84,180 @@ B. False
 
 Ans:  A
 
+111. True or False: During data unloading, only JSON and CSV files can be compressed.
+A. True
+B. False
+Ans: B
+
+During data loading, compression can be enabled for CSV, JSON PARQUET, AVRO, XML type files.
+ref: https://docs.snowflake.com/en/sql-reference/sql/create-file-format
+
+112.Which of the following are options when creating a Virtual Warehouse? (Choose two.)
+A. Auto-suspend
+B. Auto-resume
+C. Local SSD size
+D. User count
+
+Ans: AB
+
+113. Which formats are supported for unloading data from Snowflake? (Choose two.)
+A. Delimited (CSV, TSV, etc.)
+B. Avro
+C. JSON
+D. ORC
+Ans: AC
+
+Supported file formats
+Delimited files (CSV, TSV, etc.)
+JSON
+Parquet
+
+114. True or False: Data Providers can share data with only the Data Consumer.
+A. True
+B. False
+
+Ans: False
+
+115. The fail-safe retention period is how many days?
+A. 1 day
+B. 7 days
+C. 45 days
+D. 90 days
+
+Ans: B
+
+116. True or False: Once created, a micro-partition will never be changed.
+A. True
+B. False
+
+Ans: A
+
+117. What services does Snowflake automatically provide for customers that they may have been responsible for with their on-premise system? (Choose all that apply.)
+A. Installing and configuring hardware
+B. Patching software
+C. Physical security
+D. Maintaining metadata and statistics
+
+Ans: BD
+
+SNOWFLAKE is a true self-managed service, meaning:
+• There is no hardware (virtual or physical) to select, install, configure, or manage.
+• There is virtually no software to install, configure, or manage.
+• Ongoing maintenance, management, upgrades, and tuning are handled by Snowflake.
+
+118. Which of the following statements would be used to export/unload data from Snowflake?
+A. COPY INTO @stage
+B. EXPORT TO @stage
+C. INSERT INTO @stage
+D. EXPORT_TO_STAGE(stage => @stage, select => 'select * from t1');
+
+Ans: A
+
+119. True or False: A 4X-Large Warehouse may, at times, take longer to provision than a X-Small Warehouse.
+A. True
+B. False
+
+Ans: A
+
+Signed up for free Snowflake account. Created X-Small and 4X Virtual 
+Warehouse using web interface. X-Small took 96 ms, while 4X took 105 ms. 
+You can validate it in Activity -> Query History.
+
+120. How would you determine the size of the virtual warehouse used for a task?
+A. Root task may be executed concurrently (i.e. multiple instances), it is recommended to leave some margins in the execution window to avoid missing instances of execution
+B. Querying (SELECT) the size of the stream content would help determine the warehouse size. For example, if querying large stream content, use a larger warehouse size
+C. If using the stored procedure to execute multiple SQL statements, it's best to test run the stored procedure separately to size the compute resource first
+D. Since task infrastructure is based on running the task body on schedule, it's recommended to configure the virtual warehouse for automatic concurrency handling using Multi-cluster warehouse (MCW) to match the task schedule
+
+Ans: C
+
+This option suggests that before executing the task, it's beneficial to 
+test run the stored procedure separately to understand the compute resource requirements. 
+This allows you to determine the appropriate size of the virtual warehouse needed to execute the task efficiently.
+
+121. The Information Schema and Account Usage Share provide storage information for which of the following objects? (Choose three.)
+A. Users
+B. Tables
+C. Databases
+D. Internal Stages
+
+Ans: BCD
+
+122. What is the default File Format used in the COPY command if one is not specified?
+A. CSV
+B. JSON
+C. Parquet
+D. XML
+
+Ans: A
+
+123. True or False: Reader Accounts are able to extract data from shared data objects for use outside of Snowflake.
+A. True
+B. False
+
+Ans: B (Re-check)
+
+124. True or False: You can define multiple columns within a clustering key on a table.
+A. True
+B. False
+
+Ans: A
+
+125. True or False: Snowflake enforces unique, primary key, and foreign key constraints during DML operations.
+A. True
+B. False
+
+Ans: B
+
+126. True or False: Loading data into Snowflake requires that source data files be no larger than 16MB.
+A. True
+B. False
+
+Ans: B
+
+16 Mb is default. It can support till 5GB
+
+127.True or False: A Virtual Warehouse can be resized while suspended.
+A. True
+B. False
+
+Ans:A
+
+128. True or False: When you create a custom role, it is a best practice to immediately grant that role to ACCOUNTADMIN.
+A. True
+B. False
+
+Ans: B
+
+129. Which of the following accurately represents how a table fits into Snowflake's logical container hierarchy?
+A. Account -> Schema -> Database -> Table
+B. Account -> Database -> Schema -> Table
+C. Database -> Schema -> Table -> Account
+D. Database -> Table -> Schema -> Account
+
+Ans: B
+
+130. True or False: All Snowflake table types include fail-safe storage.
+A. True
+B. False
+
+Ans: A
+
+All Snowflake table types, including permanent, temporary, and transient tables, 
+include fail-safe storage. Fail-safe storage ensures that data is protected against 
+hardware failures by automatically replicating data across multiple storage devices 
+within the Snowflake system. This redundancy ensures high availability and durability 
+of the data, regardless of the table type.
+
+
+
+
+
+
+
+
+
+
+
+
+
