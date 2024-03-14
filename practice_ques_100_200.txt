@@ -438,7 +438,40 @@ E. Enterprise Edition
 
 Ans: BC
 
+151.What are supported file formats for unloading data from Snowflake? (Choose three.)
+A. XML
+B. JSON
+C. Parquet
+D. ORC
+E. AVRO
+F. CSV
+Ans: BCF
 
+152. The Snowflake cloud services layer is responsible for which tasks? (Choose two.)
+A. Local disk caching
+B. Authentication and access control
+C. Metadata management
+D. Query processing
+E. Database storage
+
+Ans: BC
+Services managed in this layer include:
+Authentication
+Infrastructure management
+Metadata management
+Query parsing and optimization
+Access control
+
+153. What is a key feature of Snowflake architecture?
+A. Zero-copy cloning creates a mirror copy of a database that updates with the original.
+B. Software updates are automatically applied on a quarterly basis.
+C. Snowflake eliminates resource contention with its virtual warehouse implementation.
+D. Multi-cluster warehouses allow users to run a query that spans across multiple clusters.
+E. Snowflake automatically sorts DATE columns during ingest, for fast retrieval by date.
+
+Ans: C
+
+One of the key features of Snowflake architecture is its virtual warehouse implementation, which eliminates resource contention by enabling each query to execute in its own isolated compute environment. This ensures that queries do not compete for resources and can be executed independently, leading to improved performance and scalability.
 
 
 
