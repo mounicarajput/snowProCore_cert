@@ -473,6 +473,148 @@ Ans: C
 
 One of the key features of Snowflake architecture is its virtual warehouse implementation, which eliminates resource contention by enabling each query to execute in its own isolated compute environment. This ensures that queries do not compete for resources and can be executed independently, leading to improved performance and scalability.
 
+154. When publishing a Snowflake Data Marketplace listing into a remote region what should be taken into consideration? (Choose two.)
+A. There is no need to have a Snowflake account in the target region, a share will be created for each user.
+B. The listing is replicated into all selected regions automatically, the data is not.
+C. The user must have the ORGADMIN role available in at least one account to link accounts for replication.
+D. Shares attached to listings in remote regions can be viewed from any account in an organization.
+E. For a standard listing the user can wait until the first customer requests the data before replicating it to the target region.
+
+Ans: BC (re-check)
+
+155. When loading data into Snowflake via Snowpipe what is the compressed file size recommendation?
+A. 10-50 MB
+B. 100-250 MB
+C. 300-500 MB
+D. 1000-1500 MB
+
+Ans: B
+
+156. Which Snowflake feature allows a user to substitute a randomly generated identifier for sensitive data, in order to prevent unauthorized users access to the data, before loading it into Snowflake?
+A. External Tokenization
+B. External Tables
+C. Materialized Views
+D. User-Defined Table Functions (UDTF)
+
+Ans: A
+
+157: Which of the following are examples of operations that require a Virtual Warehouse to complete, assuming no queries have been executed previously? (Choose three.)
+A. MIN(<< column value >>)
+B. COPY
+C. SUM(<< column value >>)
+D. UPDATE
+
+Ans: BCD
+
+158.What is the SNOWFLAKE.ACCOUNT_USAGE view that contains information about which objects were read by queries within the last 365 days (1 year)?
+A. VIEWS_HISTORY
+B. OBJECT_HISTORY
+C. ACCESS_HISTORY
+D. LOGIN_HISTORY
+
+Ans: C
+
+159. Which feature is only available in the Enterprise or higher editions of Snowflake?
+A. Column-level security
+B. SOC 2 type II certification
+C. Multi-factor Authentication (MFA)
+D. Object-level access control
+
+Ans: A
+
+160. Will data cached in a warehouse be lost when the warehouse is resized?
+A. Possibly, if the warehouse is resized to a smaller size and the cache no longer fits. Most Voted
+B. Yes, because the compute resource is replaced in its entirety with a new compute resource.
+C. No, because the size of the cache is independent from the warehouse size.
+D. Yes, because the new compute resource will no longer have access to the cache encryption key.
+
+Ans: A
+
+161. Which semi-structured file formats are supported when unloading data from a table? (Choose two.)
+A. ORC
+B. XML
+C. Avro
+D. Parquet
+E. JSON
+
+Ans: DE
+
+Structured: Delimited (CSV, TSV, etc.)
+Semi-structured: JSON, Parquet
+
+162. A running virtual warehouse is suspended.
+What is the MINIMUM amount of time that the warehouse will incur charges for when it is restarted?
+A. 1 second
+B. 60 seconds
+C. 5 minutes
+D. 60 minutes
+
+Ans: B
+
+163. What are the responsibilities of Snowflake's Cloud Service layer? (Choose three.)
+A. Authentication
+B. Resource management
+C. Virtual warehouse caching
+D. Query parsing and optimization
+E. Query execution
+F. Physical storage of micro-partitions
+
+Ans: ABD
+
+164. How long is the Fail-safe period for temporary and transient tables?
+A. There is no Fail-safe period for these tables.
+B. 1 day
+C. 7 days
+D. 31 days
+E. 90 days
+
+Ans: A
+
+165. Which command should be used to download files from a Snowflake stage to a local folder on a client's machine?
+A. PUT
+B. GET
+C. COPY
+D. SELECT
+
+Ans: B
+
+166. How does Snowflake Fail-safe protect data in a permanent table?
+A. Fail-safe makes data available up to 1 day, recoverable by user operations.
+B. Fail-safe makes data available for 7 days, recoverable by user operations.
+C. Fail-safe makes data available for 7 days, recoverable only by Snowflake Support.
+D. Fail-safe makes data available up to 1 day, recoverable only by Snowflake Support.
+
+Ans: C
+
+167.Which minimum Snowflake edition allows for a dedicated metadata store?
+A. Standard
+B. Enterprise
+C. Business Critical
+D. Virtual Private Snowflake
+
+Ans: D
+
+168. Network policies can be set at which Snowflake levels? (Choose two.)
+A. Role
+B. Schema
+C. User
+D. Database
+E. Account
+F. Tables
+
+Ans: DE (re-check)
+
+170. What are the correct parameters for time travel and fail-safe in the Snowflake Enterprise Edition?
+A. Default Time Travel Retention is set to 0 days. Maximum Time Travel Retention is 30 days. Fail Safe retention time is 1 day.
+B. Default Time Travel Retention is set to 1 day. Maximum Time Travel Retention is 365 days. Fail Safe retention time is 7 days.
+C. Default Time Travel Retention is set to 0 days. Maximum Time Travel Retention is 90 days. Fail Safe retention time is 7 days.
+D. Default Time Travel Retention is set to 1 day. Maximum Time Travel Retention is 90 days. Fail Safe retention time is 7 days.
+E. Default Time Travel Retention is set to 7 days. Maximum Time Travel Retention is 1 day. Fail Safe retention time is 90 days.
+F. Default Time Travel Retention is set to 90 days. Maximum Time Travel Retention is 7 days. Fail Safe retention time is 356 days.
+
+Ans: D
+
+
 
 
 
