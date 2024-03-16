@@ -653,5 +653,30 @@ D. They can be created to run with a caller's rights or an owner's rights.
 
 Ans: D
 
+175. Which columns are part of the result set of the Snowflake LATERAL FLATTEN command? (Choose two.)
 
+A. CONTENT
+B. PATH
+C. BYTE_SIZE
+D. INDEX
+E. DATATYPE
 
+Ans: BD
+
+176. What is the minimum Snowflake edition required to create a materialized view?
+
+A. Standard Edition
+B. Enterprise Edition
+C. Business Critical Edition
+D. Virtual Private Snowflake Edition
+
+Ans: B
+
+177. Which Snowflake function will interpret an input string as a JSON document, and produce a VARIANT value?
+
+A. parse_json()
+B. json_extract_path_text()
+C. object_construct()
+D. flatten
+
+AnsLL A
