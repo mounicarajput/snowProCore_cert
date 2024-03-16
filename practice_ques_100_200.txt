@@ -614,7 +614,44 @@ F. Default Time Travel Retention is set to 90 days. Maximum Time Travel Retentio
 
 Ans: D
 
+171. Which of the following objects are contained within a schema? (Choose two.)
+A. Role
+B. Stream
+C. Warehouse
+D. External table
+E. User
+F. Share
 
+Ans: BD
+
+172. Which of the following statements describe features of Snowflake data caching? (Choose two.)
+A. When a virtual warehouse is suspended, the data cache is saved on the remote storage layer.
+B. When the data cache is full, the least-recently used data will be cleared to make room.
+C. A user can only access their own queries from the query result cache.
+D. A user must set USE_METADATA_CACHE to TRUE to use the metadata cache in queries.
+E. The RESULT_SCAN table function can access and filter the contents of the query result cache.
+
+Ans:  BD
+
+173. A table needs to be loaded. The input data is in JSON format and is a concatenation of multiple JSON documents. The file size is 3 GB. A warehouse size S is being used. The following COPY INTO command was executed:
+COPY INTO SAMPLE FROM @~/SAMPLE.JSON (TYPE=JSON)
+The load failed with this error:
+Max LOB size (16777216) exceeded, actual size of parsed column is 17894470.
+How can this issue be resolved?
+A. Compress the file and load the compressed file.
+B. Split the file into multiple files in the recommended size range (100 MB - 250 MB).
+C. Use a larger-sized warehouse.
+D. Set STRIP_OUTER_ARRAY=TRUE in the COPY INTO command.
+
+Ans: B
+
+174. What is a feature of a stored procedure in Snowflake?
+A. They can be created as secure and hide the underlying metadata from all users.
+B. They can access tables from a single database.
+C. They can only contain a single SQL statement.
+D. They can be created to run with a caller's rights or an owner's rights.
+
+Ans: D
 
 
 
