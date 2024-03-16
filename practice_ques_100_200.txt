@@ -679,4 +679,167 @@ B. json_extract_path_text()
 C. object_construct()
 D. flatten
 
-AnsLL A
+Ans: A
+
+178. How are serverless features billed?
+
+A. Per second multiplied by an automatic sizing for the job
+B. Per minute multiplied by an automatic sizing for the job, with a minimum of one minute
+C. Per second multiplied by the size, as determined by the SERVERLESS_FEATURES_SIZE account parameter
+D. Serverless features are not billed, unless the total cost for the month exceeds 10% of the warehouse credits, on the account
+ 
+Ans: A
+https://docs.snowflake.com/en/user-guide/cost-understanding-compute
+
+179. Which Snowflake architectural layer is responsible for a query execution plan?
+
+A. Compute
+B. Data storage
+C. Cloud services
+D. Cloud provider
+
+Ans: C
+
+Notes: 
+
+Cloud Provider Layer:
+
+This layer is the underlying infrastructure provided by the chosen cloud provider (e.g., AWS, Azure, or GCP).
+Responsibilities include provisioning and managing the physical hardware, networking, and data centers.
+
+Data Storage Layer:
+
+This layer is responsible for storing all data in Snowflake.
+Snowflake uses a proprietary architecture called the "Multi-cluster, Shared Data Architecture" (MCSA).
+Data is stored in a columnar format, compressed and encrypted by default.
+Responsibilities include managing data storage, compression, encryption, and data durability.
+
+Compute Layer:
+
+This layer handles all computational tasks in Snowflake, such as query execution, data loading, and data transformation.
+Snowflake automatically provisions and manages compute resources (virtual warehouses) based on workload demands.
+Compute resources are separated from storage, allowing for independent scaling.
+Responsibilities include query optimization, query execution, and processing of data operations.
+
+Cloud Services Layer:
+
+This layer is the brain of Snowflake, providing various services for managing and orchestrating the Snowflake environment.
+It includes components such as the metadata service, query optimizer, transaction manager, session management, access control, and authentication.
+The query optimizer generates efficient query execution plans, optimizing performance based on the data and workload characteristics.
+Responsibilities include managing metadata, optimizing queries, coordinating transactions, and enforcing security policies.
+
+Client Layer:
+
+This layer consists of client applications and tools that interact with Snowflake.
+Examples include SQL clients, BI tools, ETL tools, and custom applications.
+Responsibilities include sending queries, receiving results, monitoring, and managing the Snowflake environment.
+
+
+180.When unloading to a stage, which of the following is a recommended practice or approach?
+
+A. Set SINGLE = TRUE for larger files.
+B. Use OBJECT_CONSTRUCT(*) when using Parquet.
+C. Avoid the use of the CAST function.
+D. Define an individual file format.
+
+Ans: D
+
+181. Which SQL commands, when committed, will consume a stream and advance the stream offset? (Choose two.)
+
+A. UPDATE TABLE FROM STREAM
+B. SELECT FROM STREAM
+C. INSERT INTO TABLE SELECT FROM STREAM
+D. ALTER TABLE AS SELECT FROM STREAM
+E. BEGIN COMMIT
+
+Ans: AC
+
+182. Which methods can be used to delete staged files from a Snowflake stage? (Choose two.)
+
+A. Use the DROP command after the load completes.
+B. Specify the TEMPORARY option when creating the file format.
+C. Specify the PURGE copy option in the COPY INTO command.
+D. Use the REMOVE command after the load completes.
+E. Use the DELETE LOAD HISTORY command after the load completes.
+
+Ans: CD
+
+183.On which of the following cloud platforms can a Snowflake account be hosted? (Choose three.)
+
+A. Amazon Web Services
+B. Private Virtual Cloud
+C. Oracle Cloud
+D. Microsoft Azure Cloud
+E. Google Cloud Platform
+F. Alibaba Cloud
+
+Ans: ADE
+
+184. What Snowflake role must be granted for a user to create and manage accounts?
+
+A. ACCOUNTADMIN
+B. ORGADMIN
+C. SECURITYADMIN
+D. SYSADMIN
+
+Ans: B 
+
+https://docs.snowflake.com/en/user-guide/organizations-manage-accounts
+https://docs.snowflake.com/en/user-guide/security-access-control-considerations
+
+185. Assume there is a table consisting of five micro-partitions with values ranging from A to Z.
+
+Ans: A ( A - D , e-j , K - l..so on)
+
+186.What feature can be used to reorganize a very large table on one or more columns?
+
+A. Micro-partitions
+B. Clustering keys
+C. Key partitions
+D. Clustered partitions
+
+Ans: B
+
+Clustering keys allow you to physically organize data within micro-partitions 
+based on one or more columns. By defining clustering keys on a table, you can 
+improve query performance, reduce query latency, and optimize storage efficiency
+by grouping related data together. This reorganization helps in achieving better 
+data locality and reduces the amount of data that needs to be scanned for queries involving the specified columns.
+
+187.What is an advantage of using an explain plan instead of the query profiler to evaluate the performance of a query?
+
+A. The explain plan output is available graphically.
+B. An explain plan can be used to conduct performance analysis without executing a query.
+C. An explain plan will handle queries with temporary tables and the query profiler will not.
+D. An explain plan's output will display automatic data skew optimization information.
+ 
+Ans: B
+
+188. Which data types are supported by Snowflake when using semi-structured data? (Choose two.)
+
+A. VARIANT
+B. VARRAY
+C. STRUCT
+D. ARRAY
+E. QUEUE
+
+Ans: AD
+
+189. Why does Snowflake recommend file sizes of 100-250 MB compressed when loading data?
+
+A. Optimizes the virtual warehouse size and multi-cluster setting to economy mode
+B. Allows a user to import the files in a sequential order
+C. Increases the latency staging and accuracy when loading the data
+D. Allows optimization of parallel operations
+
+Ans: D
+
+190. Which of the following features are available with the Snowflake Enterprise edition? (Choose two.)
+
+A. Database replication and failover
+B. Automated index management
+C. Customer managed keys (Tri-secret secure)
+D. Extended time travel
+E. Native support for geospatial data
+
+Ans: AD
