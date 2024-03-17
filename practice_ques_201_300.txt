@@ -108,3 +108,212 @@ D. Additional costs for storage are charged to a secondary account.
 E. Metadata pointers to cloned tables are replicated.
 
 Ans: CE
+
+211. Snowflake supports the use of external stages with which cloud platforms? (Choose three.)
+
+A. Amazon Web Services
+B. Docker
+C. IBM Cloud
+D. Microsoft Azure Cloud
+E. Google Cloud Platform
+F. Oracle Cloud
+
+Ans: ADE
+
+212. What is a limitation of a Materialized View?
+
+A. A Materialized View cannot support any aggregate functions
+B. A Materialized View can only reference up to two tables
+C. A Materialized View cannot be joined with other tables
+D. A Materialized View cannot be defined with a JOIN
+
+Ans: D
+
+213. In the Snowflake access control model, which entity owns an object by default?
+
+A. The user who created the object
+B. The SYSADMIN role
+C. Ownership depends on the type of object
+D. The role used to create the object
+
+Ans: D
+
+214. What is the minimum Snowflake edition required to use Dynamic Data Masking?
+
+A. Standard
+B. Enterprise
+C. Business Critical
+D. Virtual Private Snowflake (VPC)
+
+Ans: B
+
+215. Which services does the Snowflake Cloud Services layer manage? (Choose two.)
+
+A. Compute resources
+B. Query execution
+C. Authentication
+D. Data storage
+E. Metadata
+
+Ans: CE
+
+216. A company needs to allow some users to see Personally Identifiable Information (PII) while limiting other users from seeing the full value of the PII.
+
+Which Snowflake feature will support this?
+
+A. Row access policies
+B. Data masking policies
+C. Data encryption
+D. Role based access control
+
+Ans: B
+
+217. A user has unloaded data from a Snowflake table to an external stage.
+
+Which command can be used to verify if data has been uploaded to the external stage named my_stage?
+
+A. view @my_stage
+B. list @my_stage
+C. show @my_stage
+D. display @my_stage
+
+Ans: B
+
+The list command in Snowflake is used to list the files in a stage.
+By specifying the external stage my_stage with the @ symbol (@my_stage), 
+the command will list the files uploaded to that specific stage, allowing you to verify if the data has been unloaded successfully.
+
+
+218. Which tasks are performed in the Snowflake Cloud Services layer? (Choose two.)
+
+A. Management of metadata
+B. Computing the data
+C. Maintaining Availability Zones
+D. Infrastructure security
+E. Parsing and optimizing queries
+
+Ans: AE
+
+219. What is true about sharing data in Snowflake? (Choose two.)
+
+A. The Data Consumer pays for data storage as well as for data computing.
+B. The shared data is copied into the Data Consumer account, so the Consumer can modify it without impacting the base data of the Provider.
+C. A Snowflake account can both provide and consume shared data.
+D. The Provider is charged for compute resources used by the Data Consumer to query the shared data.
+E. The Data Consumer pays only for compute resources to query the shared data.
+
+Ans: CE
+
+220.The following JSON is stored in a VARIANT column called src of the CAR_SALES table:
+
+
+
+A user needs to extract the dealership information from the JSON.
+
+How can this be accomplished?
+
+A. select src:dealership from car_sales; Most Voted
+B. select src.dealership from car_sales;
+C. select src:Dealership from car_sales;
+D. select dealership from car_sales;
+
+Ans: A
+
+221.Which of the following significantly improves the performance of selective point lookup queries on a table?
+
+A. Clustering
+B. Materialized Views
+C. Zero-copy Cloning
+D. Search Optimization Service
+
+Ans: D
+
+222. Which of the following accurately describes shares?
+
+A. Tables, secure views, and secure UDFs can be shared
+B. Shares can be shared
+C. Data consumers can clone a new table from a share
+D. Access to a share cannot be revoked once granted
+
+ANS: A
+
+223.What are best practice recommendations for using the ACCOUNTADMIN system-defined role in Snowflake? (Choose two.)
+
+A. Ensure all ACCOUNTADMIN roles use Multi-factor Authentication (MFA).
+B. All users granted ACCOUNTADMIN role must be owned by the ACCOUNTADMIN role.
+C. The ACCOUNTADMIN role must be granted to only one user.
+D. Assign the ACCOUNTADMIN role to at least two users, but as few as possible.
+E. All users granted ACCOUNTADMIN role must also be granted SECURITYADMIN role.
+
+Ans: AD
+
+224.In the query profiler view for a query, which components represent areas 
+that can be used to help optimize query performance? (Choose two.)
+
+A. Bytes scanned
+B. Bytes sent over the network
+C. Number of partitions scanned
+D. Percentage scanned from cache
+E. External bytes scanned
+
+Ansa: AC
+
+225. What is the minimum Snowflake edition required for row level security?
+
+A. Standard
+B. Enterprise
+C. Business Critical
+D. Virtual Private Snowflake
+
+Ans: B
+
+226. The is the minimum Fail-safe retention time period for transient tables?
+
+A. 1 day
+B. 7 days
+C. 12 hours
+D. 0 days
+
+Ans: D
+
+227. What is a machine learning and data science partner within the Snowflake Partner Ecosystem?
+
+A. Informatica
+B. Power BI
+C. Adobe
+D. Data Robot
+
+Ans: D
+
+228. Which statements are correct concerning the leveraging of third-party data from the Snowflake Data Marketplace? (Choose two.)
+
+A. Data is live, ready-to-query, and can be personalized.
+B. Data needs to be loaded into a cloud provider as a consumer account.
+C. Data is not available for copying or moving to an individual Snowflake account.
+D. Data is available without copying or moving.
+E. Data transformations are required when combining Data Marketplace datasets with existing data in Snowflake.
+
+Ans: AD
+
+229. What impacts the credit consumption of maintaining a materialized view? (Choose two.)
+
+A. Whether or not it is also a secure view
+B. How often the underlying base table is queried
+C. How often the base table changes
+D. Whether the materialized view has a cluster key defined
+E. How often the materialized view is queried
+
+Ans: CD
+
+230. What COPY INTO SQL command should be used to unload data into multiple files?
+
+A. SINGLE=TRUE
+B. MULTIPLE=TRUE
+C. MULTIPLE=FALSE
+D. SINGLE=FALSE
+
+Ans: D
+
+
+
+
