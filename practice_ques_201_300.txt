@@ -1,1 +1,110 @@
+201. What Snowflake features allow virtual warehouses to handle high concurrency workloads? (Choose two.)
 
+A. The ability to scale up warehouses
+B. The use of warehouse auto scaling
+C. The ability to resize warehouses
+D. Use of multi-clustered warehouses
+E. The use of warehouse indexing
+
+Ans: BD
+
+202. Which COPY INTO command outputs the data into one file?
+
+A. SINGLE=TRUE
+B. MAX_FILE_NUMBER=1
+C. FILE_NUMBER=1
+D. MULTIPLE=FALSE
+
+Ans: A
+
+203. In which scenarios would a user have to pay Cloud Services costs? (Choose two.)
+
+A. Compute Credits = 50 Credits Cloud Services = 10
+B. Compute Credits = 80 Credits Cloud Services = 5
+C. Compute Credits = 100 Credits Cloud Services = 9
+D. Compute Credits = 120 Credits Cloud Services = 10
+E. Compute Credits = 200 Credits Cloud Services = 26
+
+Ans: AE
+
+A: 10/50 = 20% (exceeds 10%)
+B: 5/80 = 6.25% (does not exceed 10%)
+C: 9/100 = 9% (does not exceed 10%)
+D: 10/120 = 8.33% (does not exceed 10%)
+E: 26/200 = 13% (exceeds 10%)
+
+Based on your calculations, the scenarios where Cloud Services costs exceed 10% of the Compute Costs are A and E. 
+Therefore, in these scenarios, the user would have to pay Cloud Services cost
+
+204. A user created a new worksheet within the Snowsight UI and wants to share this with teammates.
+
+How can this worksheet be shared?
+
+A. Create a zero-copy clone of the worksheet and grant permissions to teammates.
+B. Create a private Data Exchange so that any teammate can use the worksheet.
+C. Share the worksheet with teammates within Snowsight.
+D. Create a database and grant all permissions to teammates.
+
+Ans: C
+
+205. How can a row access policy be applied to a table or a view? (Choose two.)
+
+A. Within the policy DDL
+B. Within the create table or create view DDL
+C. By future APPLY for all objects in a schema
+D. Within a control table
+E. Using the command ALTER ADD ROW ACCESS POLICY ;
+
+Ans: BE
+
+206. Which command can be used to load data files into a Snowflake stage?
+
+A. JOIN
+B. COPY INTO
+C. PUT
+D. GET
+
+Ans: C
+
+(up)load to stage - PUT
+(up)load from stage - COPY INTO FROM @
+unload to stage - COPY INTO @
+download from stage - GET
+
+207. What types of data listings are available in the Snowflake Data Marketplace? (Choose two.)
+
+A. Reader
+B. Consumer
+C. Vendor
+D. Standard
+E. Personalized
+
+Ans: DE
+
+208. What is the maximum Time Travel retention period for a temporary Snowflake table?
+
+A. 90 days
+B. 1 day
+C. 7 days
+D. 45 days
+
+Ans: B
+
+209. When should a multi-cluster warehouse be used in auto-scaling mode?
+
+A. When it is unknown how much compute power is needed
+B. If the select statement contains a large number of temporary tables or Common Table Expressions (CTEs)
+C. If the runtime of the executed query is very slow
+D. When a large number of concurrent queries are run on the same warehouse
+ 
+Ans: D
+
+210. What happens when a cloned table is replicated to a secondary database? (Choose two.)
+
+A. A read-only copy of the cloned tables is stored.
+B. The replication will not be successful.
+C. The physical data is replicated.
+D. Additional costs for storage are charged to a secondary account.
+E. Metadata pointers to cloned tables are replicated.
+
+Ans: CE
