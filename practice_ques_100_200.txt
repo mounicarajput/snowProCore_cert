@@ -843,3 +843,99 @@ D. Extended time travel
 E. Native support for geospatial data
 
 Ans: AD
+
+191. What is the default file size when unloading data from Snowflake using the COPY command?
+
+A. 5 MB
+B. 8 GB
+C. 16 MB
+D. 32 MB
+
+Ans: C
+
+192. What features that are part of the Continuous Data Protection (CDP) feature set in Snowflake do not require additional configuration? (Choose two.)
+
+A. Row level access policies
+B. Data masking policies
+C. Data encryption
+D. Time Travel
+E. External tokenization
+
+Ans: CD
+
+193. Which Snowflake layer is always leveraged when accessing a query from the result cache?
+
+A. Metadata
+B. Data Storage
+C. Compute
+D. Cloud Services
+
+Ans: D
+
+194. Which connectors are available in the downloads section of the Snowflake web interface (UI)? (Choose two.)
+
+A. SnowSQL
+B. JDBC
+C. ODBC
+D. HIVE
+E. Scala
+
+Ans: AB
+
+195. A Snowflake Administrator needs to ensure that sensitive corporate data in Snowflake tables is not visible to end users, but is partially visible to functional managers.
+
+How can this requirement be met?
+
+A. Use data encryption.
+B. Use dynamic data masking.
+C. Use secure materialized views.
+D. Revoke all roles for functional managers and end users.
+
+Ans: B
+
+196. Users are responsible for data storage costs until what occurs?
+
+A. Data expires from Time Travel
+B. Data expires from Fail-safe
+C. Data is deleted from a table
+D. Data is truncated from a table
+
+Ans: B
+
+197. A user has an application that writes a new file to a cloud storage location every 5 minutes.
+
+What would be the MOST efficient way to get the files into Snowflake?
+
+A. Create a task that runs a COPY INTO operation from an external stage every 5 minutes.
+B. Create a task that PUTS the files in an internal stage and automate the data loading wizard.
+C. Create a task that runs a GET operation to intermittently check for new files.
+D. Set up cloud provider notifications on the file location and use Snowpipe with auto-ingest.
+
+Ans: D
+
+198. What affects whether the query results cache can be used?
+
+A. If the query contains a deterministic function
+B. If the virtual warehouse has been suspended
+C. If the referenced data in the table has changed
+D. If multiple users are using the same virtual warehouse
+
+Ans: C
+
+199. Which of the following is an example of an operation that can be completed without requiring compute, assuming no queries have been executed previously?
+
+A. SELECT SUM (ORDER_AMT) FROM SALES;
+B. SELECT AVG(ORDER_QTY) FROM SALES;
+C. SELECT MIN(ORDER_AMT) FROM SALES;
+D. SELECT ORDER_AMT * ORDER_QTY FROM SALES;
+
+Ans: C
+
+200. How many days is load history for Snowpipe retained?
+
+A. 1 day
+B. 7 days
+C. 14 days
+D. 64 days
+
+Ans: C
