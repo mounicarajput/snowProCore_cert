@@ -314,6 +314,111 @@ D. SINGLE=FALSE
 
 Ans: D
 
+231. When cloning a database containing stored procedures and regular views, 
+that have fully qualified table references, which of the following will occur?
+
+A. The cloned views and the stored procedures will reference the cloned tables in the cloned database.
+B. An error will occur, as views with qualified references cannot be cloned.
+C. An error will occur, as stored objects cannot be cloned.
+D. The stored procedures and views will refer to tables in the source database.
+
+Ans: D
+
+232. When loading data into Snowflake, how should the data be organized?
+
+A. Into single files with 100-250 MB of compressed data per file
+B. Into single files with 1-100 MB of compressed data per file
+C. Into files of maximum size of 1 GB of compressed data per file
+D. Into files of maximum size of 4 GB of compressed data per file
+
+Ans: A
+
+233: Which of the following objects can be directly restored using the UNDROP command? (Choose two.)
+
+A. Schema
+B. View
+C. Internal stage
+D. Table
+E. User
+F. Role
+
+Ans: AD
+
+234. Which Snowflake SQL statement would be used to determine which users and roles have access to a role called MY_ROLE?
+
+A. SHOW GRANTS OF ROLE MY_ROLE
+B. SHOW GRANTS TO ROLE MY_ROLE
+C. SHOW GRANTS FOR ROLE MY_ROLE
+D. SHOW GRANTS ON ROLE MY_ROLE
+
+Ans: A
+
+235. What is the MINIMUM edition of Snowflake that is required to use a SCIM security integration?
+
+A. Business Critical Edition
+B. Standard Edition
+C. Virtual Private Snowflake (VPS)
+D. Enterprise Edition
+
+Ans: B
+
+236. A user created a transient table and made several changes to it over the course of several days. Three days after the table was created, the user would like to go back to the first version of the table.
+
+How can this be accomplished?
+
+A. Use Time Travel, as long as DATA_RETENTION_TIME_IN_DAYS was set to at least 3 days.
+B. The transient table version cannot be retrieved after 24 hours.
+C. Contact Snowflake Support to have the data retrieved from Fail-safe storage.
+D. Use the FAIL_SAFE parameter for Time Travel to retrieve the data from Fail-safe storage.
+
+Ans: B
+
+237. When reviewing the load for a warehouse using the load monitoring chart, 
+the chart indicates that a high volume of queries is always queuing in the warehouse.
+
+According to recommended best practice, what should be done to reduce the queue volume? (Choose two.)
+
+A. Use multi-clustered warehousing to scale out warehouse capacity.
+B. Scale up the warehouse size to allow queries to execute faster.
+C. Stop and start the warehouse to clear the queued queries.
+D. Migrate some queries to a new warehouse to reduce load.
+E. Limit user access to the warehouse so fewer queries are run against it.
+
+Ans: AD
+
+238.Which of the following features, associated with Continuous Data Protection (CDP), require additional Snowflake-provided data storage? (Choose two.)
+
+A. Tri-Secret Secure
+B. Time Travel
+C. Fail-safe
+D. Data encryption
+E. External stages
+
+Ans: BC
+
+239. Where can a user find and review the failed logins of a specific user for the past 30 days?
+
+A. The USERS view in ACCOUNT_USAGE
+B. The LOGIN_HISTORY view in ACCOUNT_USAGE
+C. The ACCESS_HISTORY view in ACCOUNT_USAGE
+D. The SESSIONS view in ACCOUNT_USAGE
+
+Ans: B
+
+240. What is the purpose of an External Function?
+
+A. To call code that executes outside of Snowflake
+B. To run a function in another Snowflake database
+C. To share data in Snowflake with external parties
+D. To ingest data from on-premises data sources
+
+Ans: A
+
+External Functions allow you to execute code that resides outside of Snowflake, 
+such as in an external system or service, and integrate the results seamlessly 
+into Snowflake SQL queries. This enables Snowflake users to leverage external 
+capabilities within their Snowflake environment.
+
 
 
 
