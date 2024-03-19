@@ -1053,6 +1053,15 @@ D. The cost for running the virtual warehouse will be charged by the second.
 Ans: C
 
 
+300.What is the maximum length of time travel available in the Snowflake Standard Edition?
+
+A. 1 Day
+B. 7 Days
+C. 30 Days
+D. 90 Days
+
+Ans: A
+
 
 
 
