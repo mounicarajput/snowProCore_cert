@@ -541,7 +541,109 @@ D. Users who are trying to use the warehouse will receive an error message until
 
 Ans: B
 
+251. What tasks can be completed using the COPY command? (Choose two.)
+
+A. Columns can be aggregated.
+B. Columns can be joined with an existing table.
+C. Columns can be reordered.
+D. Columns can be omitted.
+E. Data can be loaded without the need to spin up a virtual warehouse.
+
+Ans: CD
+
+252. Which Snowflake layer can be configured?
+
+A. Database Storage
+B. Cloud Services
+C. Query Processing
+D. Application Services
+
+Ans: C
+
+253: Query compilation occurs in which architecture layer of the Snowflake Cloud Data Platform?
+
+A. Compute layer
+B. Storage layer
+C. Cloud infrastructure layer
+D. Cloud services layer
+
+Ans: D
+
+Query compilation occurs in the cloud services layer of the Snowflake Cloud Data Platform. 
+The cloud services layer is one of three layers in Snowflake's architecture, along with the 
+compute layer and storage layer. The cloud services layer handles query optimization, authentication, access control, and more.
 
 
+254: If a size Small virtual warehouse is made up of two servers, how many servers make up a Large warehouse?
+
+A. 4
+B. 8
+C. 16
+D. 32
+
+Ans: 8
+
+255. A clustering key was defined on a table, but it is no longer needed.
+
+How can the key be removed?
+
+A. ALTER TABLE [TABLE NAME] PURGE CLUSTERING KEY
+B. ALTER TABLE [TABLE NAME] DELETE CLUSTERING KEY
+C. ALTER TABLE [TABLE NAME] DROP CLUSTERING KEY
+D. ALTER TABLE [TABLE NAME] REMOVE CLUSTERING KEY
+
+Ans: C
+
+Explanation:
+
+The DROP CLUSTERING KEY statement is used to remove the clustering key from the specified table.
+The syntax follows the pattern: ALTER TABLE [TABLE NAME] DROP CLUSTERING KEY.
+
+256. What is a core benefit of clustering?
+
+A. To guarantee uniquely identifiable records in the database
+B. To increase scan efficiency in queries by improving pruning
+C. To improve performance by creating a separate file for point lookups
+D. To provide data redundancy by duplicating micro-partitions
+
+Ans: B
+
+257. Which statement is true about Multi-Factor Authentication (MFA) in Snowflake?
+
+A. MFA can be enforced or applied for a given role.
+B. Snowflake users are automatically enrolled in MFA.
+C. Users enroll in MFA by submitting a request to Snowflake Support.
+D. MFA is an integrated Snowflake feature.
+
+Ans: D
+
+258. What data type should be used to store JSON data natively in Snowflake?
+
+A. JSON
+B. String
+C. Object
+D. VARIANT
+
+Ans: D
+
+259. What should be considered when deciding to use a Secure View? (Choose two.)
+
+A. No details of the query execution plan will be available in the query profiler.
+B. Once created there is no way to determine if a view is secure or not.
+C. Secure views do not take advantage of the same internal optimizations as standard views.
+D. It is not possible to create secure materialized views.
+E. The view definition of a secure view is still visible to users by way of the information schema.
+
+Ans: AC
+
+260. The information schema provides storage information for which of the following objects? (Choose two.)
+
+A. Users
+B. Databases
+C. Internal stages
+D. Resource monitors
+E. Pipes
+
+Ans: BC
 
 
