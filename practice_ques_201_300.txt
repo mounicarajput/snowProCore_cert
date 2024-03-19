@@ -646,4 +646,413 @@ E. Pipes
 
 Ans: BC
 
+261: What is a responsibility of Snowflake’s virtual warehouses?
+
+A. Infrastructure management
+B. Metadata management
+C. Query execution
+D. Query parsing and optimization
+E. Management of the storage layer
+
+Ans: C
+
+262: Which data type is supported by Snowflake data classification?
+
+A. Binary
+B. Float
+C. Geography
+D. Variant
+
+Ans: B
+
+263:When unloading data to an external stage, which compression format can be used for Parquet files with the COPY INTO command?
+
+A. BROTLI
+B. GZIP
+C. LZO
+D. ZSTD
+
+
+Ans: C - LZO:
+https://docs.snowflake.com/en/sql-reference/sql/copy-into-location.html#type-parquet
+Options
+Default: Auto = Snappy
+LZO
+Snappy
+None
+Other options are:
+
+LZO is for Parquet file and GZIP is for JSON file.
+
+264. Which SQL command can be used to verify the privileges that are granted to a role?
+
+A. SHOW GRANTS ON ROLE
+B. SHOW ROLES
+C. SHOW GRANTS TO ROLE
+D. SHOW GRANTS FOR ROLE
+
+Ans: D
+
+265. Which Query Profile result indicates that a warehouse is sized too small?
+
+A. There are a lot of filter nodes.
+B. Bytes are spilling to external storage.
+C. The number of processed rows is very high.
+D. The number of partitions scanned is the same as partitions total.
+
+Ans: B
+
+266. What is the default Time Travel retention period?
+
+A. 1 day
+B. 7 days
+C. 45 days
+D. 90 days
+
+Ans: A
+
+267. Which of the following are best practice recommendations that should be considered when loading data into Snowflake? (Choose two.)
+
+A. Load files that are approximately 25 MB or smaller.
+B. Remove all dates and timestamps.
+C. Load files that are approximately 100-250 MB (or larger).
+D. Avoid using embedded characters such as commas for numeric data types.
+E. Remove semi-structured data types.
+
+Ans: CD
+
+268. Which schema has the RESOURCE_MONITORS view?
+
+A. ACCOUNT_USAGE
+B. READER_ACCOUNT_USAGE
+C. INFORMATION_SCHEMA
+D. WAREHOUSE_USAGE_SCHEMA
+
+Ans: B
+
+269. What is the purpose of enabling Federated Authentication on a Snowflake account?
+
+A. Disables the ability to use key pair and basic authentication (e.g., username/password) when connecting
+B. Allows dual Multi-Factor Authentication (MFA) when connecting to Snowflake
+C. Forces users to connect through a secure network proxy
+D. Allows users to connect using secure single sign-on (SSO) through an external identity provider
+
+Ans: D
+
+270. Which Snowflake partner category is represented at the top of this diagram (labeled 1)?
+
+
+
+A. Business Intelligence
+B. Machine Learning and Data Science
+C. Security and Governance
+D. Data Integration
+
+Ans: D
+
+271. Which object types are protected by Fail-safe? (Choose two.)
+
+A. Permanent Tables
+B. Temporary Tables
+C. External Tables
+D. Materialized Views
+E. Transient Tables
+
+Ans: AB ( check)
+
+272. Snowflake's approach to the management of system access combines which of the following models? (Choose two.)
+
+A. Security Assertion Markup Language (SAML)
+B. Role-Based Access Control (RBAC)
+C. Identity Access Management (AM)
+D. Create, Read, Update, and Delete (CRUD)
+E. Discretionary Access Control (DAC)
+F. Mandatory Access Control (MAC)
+
+Ans: BE
+
+273. According to Snowflake best practice recommendations, which role should be used to create databases?
+
+A. ACCOUNTADMIN
+B. SYSADMIN
+C. SECURITYADMIN
+D. USERADMIN
+
+Ans: B
+
+274. To add or remove search optimization for a table, a user must have which of the following privileges or roles? (Choose two.)
+
+A. The MODIFY privilege on the table
+B. The OWNERSHIP privilege on the table
+C. A SECURITYADMIN role
+D. The ADD SEARCH OPTIMIZATION privilege on the schema that contains the table
+E. The SELECT privilege on the table
+
+Ans: BD
+
+275. While using a COPY command with a Validation_mode parameter, which of the following statements will return an error?
+
+A. Statements that insert a duplicate record during a load
+B. Statements that have a specific data type in the source
+C. Statements that have duplicate file names
+D. Statements that transform data during a load
+
+Ans: D
+
+276. When is the result set cache no longer available? (Choose two.)
+
+A. When another warehouse is used to execute the query
+B. When another user executes the query
+C. When the underlying data has changed
+D. When the warehouse used to execute the query is suspended
+E. When it has been 24 hours since the last query
+
+Ans: CE
+
+277.What is the recommended file sizing for data loading using Snowpipe?
+
+A. A compressed file size greater than 100 MB, and up to 250 MB
+B. A compressed file size greater than 100 GB, and up to 250 GB
+C. A compressed file size greater than 10 MB, and up to 100 MB
+D. A compressed file size greater than 1 GB, and up to 2 GB
+
+Ans: A
+
+278. Which statements are true concerning Snowflake’s underlying cloud infrastructure? (Choose three.)
+
+A. Snowflake data and services are deployed in a single availability zone within a cloud provider’s region.
+B. Snowflake data and services are available in a single cloud provider and a single region; the use of multiple cloud providers is not supported.
+C. Snowflake can be deployed in a customer’s private cloud using the customer’s own compute and storage resources for Snowflake compute and storage.
+D. Snowflake uses the core compute and storage services of each cloud provider for its own compute and storage.
+E. All three layers of Snowflake’s architecture (storage, compute, and cloud services) are deployed and managed entirely on a selected cloud platform.
+F. Snowflake data and services are deployed in at least three availability zones within a cloud provider’s region.
+
+ANs: DEF
+
+279. A user unloaded a Snowflake table called mytable to an internal stage called mystage.
+
+Which command can be used to view the list of files that has been uploaded to the stage?
+
+A. list @mytable;
+B. list @%mytable;
+C. list @%mystage;
+D. list @mystage;
+
+Ans: D
+
+280. What is a best practice after creating a custom role?
+
+A. Create the custom role using the SYSADMIN role.
+B. Assign the custom role to the SYSADMIN role.
+C. Assign the custom role to the PUBLIC role.
+D. Add _CUSTOM to all custom role names.
+
+Ans: B
+
+281. Which is the MINIMUM required Snowflake edition that a user must have if they want to use AWS/Azure Privatelink or Google Cloud Private Service Connect?
+
+A. Standard
+B. Premium
+C. Enterprise
+D. Business Critical
+
+Ans: D
+
+282: Which of the following query profiler variables will indicate that a virtual warehouse is not sized correctly for the query being executed?
+
+A. Bytes sent over the network
+B. Synchronization
+C. Initialization
+D. Remote spillage
+
+Ans: D
+
+283. Which of the following Snowflake capabilities are available in all Snowflake editions? (Choose two.)
+
+A. Customer-managed encryption keys through Tri-Secret Secure
+B. Automatic encryption of all data
+C. Up to 90 days of data recovery through Time Travel
+D. Object-level access control
+E. Column-level security to apply data masking policies to tables and views
+
+Ans: BD
+
+Busines Critical and VPS
+A. Customer-managed encryption keys through Tri-Secret Secure
+
+Enterprise:
+C. Up to 90 days of data recovery through Time Travel
+E. Column-level security to apply data masking policies to tables and views
+
+All:
+B. Automatic encryption of all data
+D. Object-level access control
+
+
+284: A PUT command can be used to stage local files from which Snowflake interface?
+
+A. SnowSQL
+B. Snowflake classic web interface (UI)
+C. Snowsight
+D. .NET driver
+
+Ans: A
+
+285. Which of the following indicates that it may be appropriate to use a clustering key for a table? (Choose two.)
+
+A. The table contains a column that has very low cardinality.
+B. DML statements that are being issued against the table are blocked.
+C. The table has a small number of micro-partitions.
+D. Queries on the table are running slower than expected.
+E. The clustering depth for the table is large.
+
+Ans: DE
+
+286. Which cache type is used to cache data output from SQL queries?
+
+A. Metadata cache
+B. Result cache
+C. Remote cache
+D. Local file cache
+
+Ans: B
+
+287. Which of the following describes how clustering keys work in Snowflake?
+
+A. Clustering keys update the micro-partitions in place with a full sort, and impact the DML operations.
+B. Clustering keys sort the designated columns over time, without blocking DML operations.
+C. Clustering keys create a distributed, parallel data structure of pointers to a table's rows and columns.
+D. Clustering keys establish a hashed key on each node of a virtual warehouse to optimize joins at run-time.
+
+Ans: B
+
+288. Which of the following operations require the use of a running virtual warehouse? (Choose two.)
+
+A. Downloading data from an internal stage
+B. Listing files in a stage
+C. Executing a stored procedure
+D. Altering a table
+E. Querying data from a materialized view
+
+Ans: CE
+
+289.What is used to limit the credit usage of a virtual warehouse within a Snowflake account?
+
+A. Load monitor
+B. Resource monitor
+C. Query Profile
+D. Stream
+
+Ans: B
+
+290. What are the benefits of the replication feature in Snowflake? (Choose two.)
+
+A. Disaster recovery
+B. Time Travel
+C. Fail-safe
+D. Database failover and failback
+E. Data security
+
+Ans: AD
+
+291. Which of the following roles are recommended to create and manage users and roles? (Choose two.)
+
+A. SYSADMIN
+B. SECURITYADMIN
+C. PUBLIC
+D. ACCOUNTADMIN
+E. USERADMIN
+
+Ans: BE
+
+292. When can a newly configured virtual warehouse start running SQL queries?
+
+A. After 50% of the warehouse provisioning has completed
+B. During the time slots defined by the ACCOUNTADMIN
+C. When the warehouse provisioning is completed
+D. After the warehouse replication is completed
+
+Ans: C
+
+293. What actions will prevent leveraging of the ResultSet cache?
+
+A. Removing a column from the query SELECT list
+B. Stopping the virtual warehouse that the query is running against
+C. If the result has not been reused within the last 12 hours
+D. Executing the RESULTS_SCAN() table function
+
+294. What actions will prevent leveraging of the ResultSet cache?
+
+A. Removing a column from the query SELECT list
+B. Stopping the virtual warehouse that the query is running against
+C. If the result has not been reused within the last 12 hours
+D. Executing the RESULTS_SCAN() table function
+
+Ans: A
+
+295. Which of the following are benefits of micro-partitioning? (Choose two.)
+
+A. Micro-partitions cannot overlap in their range of values.
+B. Micro-partitions are immutable objects that support the use of Time Travel.
+C. Micro-partitions can reduce the amount of I/O from object storage to virtual warehouses.
+D. Rows are automatically stored in sorted order within micro-partitions.
+E. Micro-partitions can be defined on a schema-by-schema basis.
+
+Ans: BC
+
+296. Which data type can be used to store geospatial data in Snowflake?
+
+A. Variant
+B. Object
+C. Geometry
+D. Geography
+
+Ans: D
+
+297. If all virtual warehouse resources are maximized while processing a query workload, what will happen to new queries that are submitted to the warehouse?
+
+A. All queries will terminate when the resources are maximized.
+B. The warehouse will scale out automatically
+C. The warehouse will move to a suspended state.
+D. New queries will be queued and executed when capacity is available.
+
+Ans: D
+
+298. Masking policies can be applied to which of the following Snowflake objects? (Choose two.)
+
+A. A materialized view
+B. A stored procedure
+C. A table
+D. A stream
+E. A pipe -
+F. A User-Defined Function (UDF)
+
+Ans: AC
+
+299. What actions are supported by Snowflake resource monitors? (Choose two.)
+
+A. Alert
+B. Notify
+C. Notify and suspend
+D. Abort
+E. Suspend immediately
+
+Ans: BC
+
+300. A user executes the following SQL query:
+
+create table SALES_BKP like SALES;
+
+What are the cost implications for processing this query?
+
+A. Processing costs will be generated based on how long the query takes.
+B. Storage costs will be generated based on the size of the data.
+C. No costs will be incurred as the query will use metadata.
+D. The cost for running the virtual warehouse will be charged by the second.
+
+Ans: C
+
+
+
+
 
