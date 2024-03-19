@@ -1,1 +1,99 @@
+301. What happens when an external or an internal stage is dropped? (Choose two.)
+
+A. When dropping an external stage, the files are not removed and only the stage is dropped.
+B. When dropping an external stage, both the stage and the files within the stage are removed.
+C. When dropping an internal stage, the files are deleted with the stage and the files are recoverable.
+D. When dropping an internal stage, the files are deleted with the stage and the files are not recoverable.
+E. When dropping an internal stage, only selected files are deleted with the stage and are not recoverable.
+
+Ans: AD
+
+302. A user has 10 files in a stage containing new customer data. The ingest operation completes with no errors, using the following command:
+
+COPY INTO my_table FROM @my_stage;
+
+The next day the user adds 10 files to the stage so that now the stage contains a mixture of new customer data and updates to the previous data. The user did not remove the 10 original files.
+
+If the user runs the same COPY INTO command what will happen?
+
+A. All data from all of the files on the stage will be appended to the table.
+B. Only data about new customers from the new files will be appended to the table.
+C. The operation will fail with the error UNCERTAIN FILES IN STAGE.
+D. All data from only the newly-added files will be appended to the table. 
+
+Ans: D
+
+303. Which parameter can be used to instruct a COPY command to verify data files instead of loading them into a specified table?
+
+A. STRIP_NULL_VALUES
+B. SKIP_BYTE_ORDER_MARK
+C. REPLACE_INVALID_CHARACTERS
+D. VALIDATION_MODE
+
+Ans: D
+
+304. Which of the following SQL statements will list the version of the drivers currently being used?
+
+A. Execute SELECT CURRENT_ODBC_CLIENT(); from the Web UI
+B. Execute SELECT CURRENT_JDBC_VERSION(); from SnowSQL
+C. Execute SELECT CURRENT_CLIENT(); from an application
+D. Execute SELECT CURRENT_VERSION(); from the Python Connector
+
+Ans: B ( CHECK)
+
+305. Which Snowflake technique can be used to improve the performance of a query?
+
+A. Clustering
+B. Indexing
+C. Fragmenting
+D. Using INDEX_HINTS
+Ans:A
+
+306. What happens to the shared objects for users in a consumer account from a share, once a database has been created in that account?
+
+A. The shared objects are transferred.
+B. The shared objects are copied.
+C. The shared objects become accessible.
+D. The shared objects can be re-shared.
+
+Ans: C
+
+307. Using variables in Snowflake is denoted by using which SQL character?
+
+A. @
+B. &
+C. $
+D. #
+
+Ans: C
+
+308. Which commands should be used to grant the privilege allowing a role to select data from all current tables and any tables that will be created later in a schema? (Choose two.)
+
+A. grant USAGE on all tables in schema DB1.SCHEMA to role MYROLE;
+B. grant USAGE on future tables in schema DB1.SCHEMA to role MYROLE;
+C. grant SELECT on all tables in schema DB1.SCHEMA to role MYROLE;
+D. grant SELECT on future tables in schema DB1.SCHEMA to role MYROLE;
+E. grant SELECT on all tables in database DB1 to role MYROLE;
+F. grant SELECT on future tables in database DB1 to role MYROLE;
+
+Ans: CD
+
+309. How can a user change which columns are referenced in a view?
+
+A. Modify the columns in the underlying table
+B. Use the ALTER VIEW command to update the view
+C. Recreate the view with the required changes
+D. Materialize the view to perform the changes
+
+Ans: C
+
+310. Which statement describes pruning?
+
+A. The filtering or disregarding of micro-partitions that are not needed to return a query.
+B. The return of micro-partitions values that overlap with each other to reduce a query's runtime.
+C. A service that is handled by the Snowflake Cloud Services layer to optimize caching.
+D. The ability to allow the result of a query to be accessed as if it were a table.
+
+Ans: A
+
 
