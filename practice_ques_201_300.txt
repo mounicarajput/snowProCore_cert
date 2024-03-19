@@ -420,5 +420,128 @@ into Snowflake SQL queries. This enables Snowflake users to leverage external
 capabilities within their Snowflake environment.
 
 
+241. Which of the following statements apply to Snowflake in terms of security? (Choose two.)
+
+A. Snowflake leverages a Role-Based Access Control (RBAC) model.
+B. Snowflake requires a user to configure an IAM user to connect to the database.
+C. All data in Snowflake is encrypted.
+D. Snowflake can run within a user's own Virtual Private Cloud (VPC).
+E. All data in Snowflake is compressed.
+
+Ans: AC
+
+242. A single user of a virtual warehouse has set the warehouse to auto-resume and auto-suspend after 10 minutes. The warehouse is currently suspended and the user performs the following actions:
+
+1. Runs a query that takes 3 minutes to complete
+2. Leaves for 15 minutes
+3. Returns and runs a query that takes 10 seconds to complete
+4. Manually suspends the warehouse as soon as the last query was completed
+
+243. When the user returns, how much billable compute time will have been consumed?
+
+A. 4 minutes
+B. 10 minutes
+C. 14 minutes
+D. 24 minutes
+
+Ans: C
+
+244. What can be used to view warehouse usage over time? (Choose two.)
+
+A. The LOAD HISTORY view
+B. The query history view
+C. The SHOW WAREHOUSES command
+D. The WAREHOUSE_METERING_HISTORY view
+E. The billing and usage tab in the Snowflake web UI
+
+Ans: DE
+
+245: What actions will prevent leveraging of the ResultSet cache? (Choose two.)
+
+A. Removing a column from the query SELECT list
+B. Stopping the virtual warehouse that the query is running against
+C. Clustering of the data used by the query
+D. Executing the RESULTS_SCAN() table function
+E. Changing a column that is not in the cached query
+
+Ans: AE
+
+246. Which statement is true about running tasks in Snowflake?
+
+A. A task can be called using a CALL statement to run a set of predefined SQL commands.
+B. A task allows a user to execute a single SQL statement/command using a predefined schedule.
+C. A task allows a user to execute a set of SQL commands on a predefined schedule.
+D. A task can be executed using a SELECT statement to run a predefined SQL command.
+
+Ans: C
+
+247. Which data types does Snowflake support when querying semi-structured data? (Choose two.)
+
+A. VARIANT
+B. VARCHAR
+C. XML
+D. ARRAY
+E. BLOB
+
+Ans: AD
+
+248. In an auto-scaling multi-cluster virtual warehouse with the setting SCALING_POLICY = ECONOMY enabled, when is another cluster started?
+
+A. When the system has enough load for 2 minutes
+B. When the system has enough load for 6 minutes
+C. When the system has enough load for 8 minutes
+D. When the system has enough load for 10 minutes
+Ans: B
+
+249. What is the following SQL command used for?
+
+Select * from table(validate(t1, job_id => '_last'));
+
+A. To validate external table files in table t1 across all sessions
+B. To validate task SQL statements against table t1 in the last 14 days
+C. To validate a file for errors before it gets executed using a COPY command
+D. To return errors from the last executed COPY command into table t1 in the current session
+
+Ans: D
+
+250. A sales table FCT_SALES has 100 million records.
+
+The following query was executed:
+
+SELECT COUNT (1) FROM FCT_SALES;
+
+How did Snowflake fulfill this query?
+
+A. Query against the result set cache
+B. Query against a virtual warehouse cache
+C. Query against the most-recently created micro-partition
+D. Query against the metadata cache
+
+250. A sales table FCT_SALES has 100 million records.
+
+The following query was executed:
+
+SELECT COUNT (1) FROM FCT_SALES;
+
+How did Snowflake fulfill this query?
+
+A. Query against the result set cache
+B. Query against a virtual warehouse cache
+C. Query against the most-recently created micro-partition
+D. Query against the metadata cache
+
+Ans: D
+
+250. What happens when a virtual warehouse is resized?
+
+A. When increasing the size of an active warehouse the compute resource for all running and queued queries on the warehouse are affected.
+B. When reducing the size of a warehouse the compute resources are removed only when they are no longer being used to execute any current statements.
+C. The warehouse will be suspended while the new compute resource is provisioned and will resume automatically once provisioning is complete.
+D. Users who are trying to use the warehouse will receive an error message until the resizing is complete.
+
+Ans: B
+
+
+
 
 
