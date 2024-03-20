@@ -196,5 +196,103 @@ D. A Windows server file share on Azure
 
 Ans: C
 
+321. Which database objects can be shared with the Snowflake secure data sharing feature? (Choose two.)
+
+A. Files
+B. External tables
+C. Secure User-Defined Functions (UDFs)
+D. Sequences
+E. Streams
+
+Ans: BC
+
+322. Which statements reflect key functionalities of a Snowflake Data Exchange? (Choose two.)
+
+A. If an account is enrolled with a Data Exchange, it will lose its access to the Snowflake Marketplace.
+B. A Data Exchange allows groups of accounts to share data privately among the accounts.
+C. A Data Exchange allows accounts to share data with third, non-Snowflake parties.
+D. Data Exchange functionality is available by default in accounts using the Enterprise edition or higher.
+E. The sharing of data in a Data Exchange is bidirectional. An account can be a provider for some datasets and a consumer for others.
+
+Ans: BE
+
+323. A Snowflake user executed a query and received the results. Another user executed the same query 4 hours later. The data had not changed.
+
+What will occur?
+
+A. No virtual warehouse will be used, data will be read from the result cache.
+B. No virtual warehouse will be used, data will be read from the local disk cache.
+C. The default virtual warehouse will be used to read all data.
+D. The virtual warehouse that is defined at the session level will be used to read all data.
+
+Ans: A
+
+324. Which feature allows a user the ability to control the organization of data in a micro-partition?
+
+A. Range Partitioning
+B. Search Optimization Service
+C. Automatic Clustering
+D. Horizontal Partitioning
+
+Ans: B ( Check)
+
+325. Which privilege must be granted to a share to allow secure views the ability to reference data in multiple databases?
+
+A. CREATE_SHARE on the account
+B. SHARE on databases and schemas
+C. SELECT on tables used by the secure view
+D. REFERENCE_USAGE on databases
+
+Ans: D
+
+326. In which use case does Snowflake apply egress charges?
+
+A. Data sharing within a specific region
+B. Query result retrieval
+C. Database replication
+D. Loading data into Snowflake
+
+Ans: C
+
+327. Which of the following compute resources or features are managed by Snowflake? (Choose two.)
+
+A. Execute a COPY command
+B. Updating data
+C. Snowpipe
+D. AUTOMATIC_CLUSTERING
+E. Scaling up a warehouse
+
+Ans: CD
+
+328. A materialized view should be created when which of the following occurs? (Choose two.)
+
+A. There is minimal cost associated with running the query.
+B. The query consumes many compute resources every time it runs.
+C. The base table gets updated frequently.
+D. The query is highly optimized and does not consume many compute resources.
+E. The results of the query do not change often and are used frequently.
+
+Ans: BE
+
+329. What privilege should a user be granted to change permissions for new objects in a managed access schema?
+
+A. Grant the OWNERSHIP privilege on the schema.
+B. Grant the OWNERSHIP privilege on the database.
+C. Grant the MANAGE GRANTS global privilege.
+D. Grant ALL privileges on the schema.
+
+Ans: A
+
+330. What happens when a Data Provider revokes privileges to a share on an object in their source database?
+
+A. The object immediately becomes unavailable for all Data Consumers.
+B. Any additional data arriving after this point in time will not be visible to Data Consumers.
+C. The Data Consumers stop seeing data updates and become responsible for storage charges for the object.
+D. A static copy of the object at the time the privilege was revoked is created in the Data Consumers account.
+
+
+Ans: A
+
+
 
 
