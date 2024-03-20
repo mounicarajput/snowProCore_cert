@@ -96,4 +96,105 @@ D. The ability to allow the result of a query to be accessed as if it were a tab
 
 Ans: A
 
+311. Which SQL command can be used to see the CREATE definition of a masking policy?
+
+A. SHOW MASKING POLICIES
+B. DESCRIBE MASKING POLICY
+C. GET_DDL
+D. LIST MASKING POLICIES
+
+Ans: C
+
+312. Which of the following is the Snowflake Account_Usage.Metering_History view used for?
+
+A. Gathering the hourly credit usage for an account
+B. Compiling an account's average cloud services cost over the previous month
+C. Summarizing the throughput of Snowpipe costs for an account
+D. Calculating the funds left on an account's contract
+ 
+Ans: A
+
+313. Query parsing and compilation occurs in which architecture layer of the Snowflake Cloud Data Platform?
+
+A. Cloud services layer
+B. Compute layer
+C. Storage layer
+D. Cloud agnostic layer
+
+Ans: A
+
+Query compilation occurs in the Cloud Services layer of Snowflake's architecture. This layer is responsible for handling query parsing, optimization, authentication, and access control. It also performs other operations like metadata management, pruning, and query rewrite.
+
+314. Which of the following Snowflake objects can be shared using a secure share? (Choose two.)
+
+A. Materialized views
+B. Sequences
+C. Procedures
+D. Tables
+E. Secure User Defined Functions (UDFs)
+
+Ans: DE
+
+315. What happens to the underlying table data when a CLUSTER BY clause is added to a Snowflake table?
+
+A. Data is hashed by the cluster key to facilitate fast searches for common data values
+B. Larger micro-partitions are created for common data values to reduce the number of partitions that must be scanned
+C. Smaller micro-partitions are created for common data values to allow for more parallelism
+D. Data may be colocated by the cluster key within the micro-partitions to improve pruning performance 
+
+Ans: D
+
+316. Which of the following conditions must be met in order to return results from the results cache? (Choose two.)
+
+A. The user has the appropriate privileges on the objects associated with the query.
+B. Micro-partitions have been reclustered since the query was last run.
+C. The new query is run using the same virtual warehouse as the previous query.
+D. The query includes a User Defined Function (UDF).
+E. The query has been run within 24 hours of the previously-run query.
+
+Ans: AE
+
+317. Which statement about billing applies to Snowflake credits?
+
+A. Credits are billed per-minute with a 60-minute minimum.
+B. Credits are used to pay for cloud data storage usage.
+C. Credits are consumed based on the number of credits billed for each hour that a warehouse runs.
+D. Credits are consumed based on the warehouse size and the time the warehouse is running.
+
+Ans: D
+
+318. A user needs to create a materialized view in the schema MYDB.MYSCHEMA.
+
+Which statements will provide this access?
+
+A. GRANT ROLE MYROLE TO USER USER1;
+CREATE MATERIALIZED VIEW ON SCHEMA MYDB.MYSCHEMA TO ROLE MYROLE;
+B. GRANT ROLE MYROLE TO USER USER1;
+CREATE MATERIALIZED VIEW ON SCHEMA MYDB.MYSCHEMA TO USER USER1;
+C. GRANT ROLE MYROLE TO USER USER1;
+CREATE MATERIALIZED VIEW ON SCHEMA MYDB.MYSCHEMA TO USER1;
+D. GRANT ROLE MYROLE TO USER USER1;
+CREATE MATERIALIZED VIEW ON SCHEMA MYDB.MYSCHEMA TO MYROLE;
+
+Ans: A
+
+319. What is the purpose of multi-cluster virtual warehouses?
+
+A. To create separate data warehouses to increase query optimization
+B. To allow users the ability to choose the type of compute nodes that make up a virtual warehouse cluster
+C. To eliminate or reduce queuing of concurrent queries
+D. To allow the warehouse to resize automatically
+
+Ans: C
+
+320. Which of the following is a valid source for an external stage when the Snowflake account is located on Microsoft Azure?
+
+A. An FTP server with TLS encryption
+B. An HTTPS server with WebDAV
+C. A Google Cloud storage bucket
+D. A Windows server file share on Azure
+
+Ans: C
+
+
 
