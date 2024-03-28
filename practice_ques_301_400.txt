@@ -293,6 +293,104 @@ D. A static copy of the object at the time the privilege was revoked is created 
 
 Ans: A
 
+331. Which command can be used to load data into an internal stage?
+
+A. LOAD
+B. COPY
+C. GET
+D. PUT
+
+Ans: D
+
+332. What is the MINIMUM Snowflake edition required to use the periodic rekeying of micro-partitions?
+
+A. Enterprise
+B. Business Critical
+C. Standard
+D. Virtual Private Snowflake
+
+Ans: A
+
+333. Which stage type can be altered and dropped?
+
+A. Database stage
+B. External stage
+C. Table stage
+D. User stage
+
+Ans: B
+
+https://docs.snowflake.com/en/sql-reference/sql/drop-stage
+Internal and external stages both can be drooped.
+
+334. Which Snowflake object enables loading data from files as soon as they are available in a cloud storage location?
+
+A. Pipe
+B. External stage
+C. Task
+D. Stream
+
+Ans: A
+
+335. A user is loading JSON documents composed of a huge array containing multiple records into Snowflake. The user enables the STRIP_OUTER_ARRAY file format option.
+
+What does the STRIP_OUTER_ARRAY file format do?
+
+A. It removes the last element of the outer array.
+B. It removes the outer array structure and loads the records into separate table rows.
+C. It removes the trailing spaces in the last element of the outer array and loads the records into separate table columns.
+D. It removes the NULL elements from the JSON object eliminating invalid data and enables the ability to load the records.
+
+Ans: B
+
+336. Which of the following describes how multiple Snowflake accounts in a single organization relate to various cloud providers?
+
+A. Each Snowflake account can be hosted in a different cloud vendor and region.
+B. Each Snowflake account must be hosted in a different cloud vendor and region.
+C. All Snowflake accounts must be hosted in the same cloud vendor and region.
+D. Each Snowflake account can be hosted in a different cloud vendor, but must be in the same region.
+
+Ans: A
+
+337. If a Snowflake user decides a table should be clustered, what should be used as the cluster key?
+
+A. The columns that are queried in the select clause.
+B. The columns with very high cardinality.
+C. The columns with many different values.
+D. The columns most actively used in the select filters.
+
+Ans: D
+
+338. What are value types that a VARIANT column can store? (Choose two.)
+
+A. STRUCT
+B. OBJECT
+C. BINARY
+D. ARRAY
+E. CLOB
+
+Ans: BD
+
+339. A company needs to read multiple terabytes of data for an initial load as part of a Snowflake migration. The company can control the number and size of CSV extract files.
+
+How does Snowflake recommend maximizing the load performance?
+
+A. Use auto-ingest Snowpipes to load large files in a serverless model.
+B. Produce the largest files possible, reducing the overall number of files to process.
+C. Produce a larger number of smaller files and process the ingestion with size Small virtual warehouses.
+D. Use an external tool to issue batched row-by-row inserts within BEGIN TRANSACTION and COMMIT commands.
+
+Ans: B
+
+340. For non-materialized views, what column in Information Schema and Account Usage identifies whether a view is secure or not?
+
+A. CHECK_OPTION
+B. IS_SECURE
+C. IS_UPDATEABLE
+D. TABLE_NAME
+
+Ans: B
+
 
 
 
