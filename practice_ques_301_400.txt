@@ -391,6 +391,109 @@ D. TABLE_NAME
 
 Ans: B
 
+341. The bulk data load history that is available upon completion of the COPY statement is stored where and for how long?
+
+A. In the metadata of the target table for 14 days
+B. In the metadata of the pipe for 14 days
+C. In the metadata of the target table for 64 days
+D. In the metadata of the pipe for 64 days
+
+Ans: C
+
+342. User INQUISITIVE_PERSON has been granted the role DATA_SCIENCE. The role DATA_SCIENCE has privileges OWNERSHIP on the schema MARKETING of the database ANALYTICS_DW.
+
+Which command will show all privileges granted to that schema?
+
+A. SHOW GRANTS ON ROLE DATA_SCIENCE
+B. SHOW GRANTS ON SCHEMA ANALYTICS_DW.MARKETING
+C. SHOW GRANTS TO USER INQUISITIVE_PERSON
+D. SHOW GRANTS OF ROLE DATA_SCIENCE
+
+Ans: B
+
+343. Which of the following are characteristics of security in Snowflake?
+
+A. Account and user authentication is only available with the Snowflake Business Critical edition.
+B. Support for HIPAA and GDPR compliance is available for UI Snowflake editions.
+C. Periodic rekeying of encrypted data is available with the Snowflake Enterprise edition and higher
+D. Private communication to internal stages is allowed in the Snowflake Enterprise edition and higher.
+
+Ans: C
+
+344.hich of the following objects can be shared through secure data sharing?
+
+A. Masking policy
+B. Stored procedure
+C. Task
+D. External table
+
+Ans: D
+
+245. Which formats does Snowflake store unstructured data in? (Choose two.)
+
+A. GeoJSON
+B. Array
+C. XML
+D. Object
+E. BLOB
+
+Ans: BD
+
+346. A user is preparing to load data from an external stage.
+
+Which practice will provide the MOST efficient loading performance?
+
+A. Organize files into logical paths
+B. Store the files on the external stage to ensure caching is maintained
+C. Use pattern matching for regular expression execution
+D. Load the data in one large file
+
+Ans: A
+
+347. What effect does WAIT_FOR_COMPLETION = TRUE have when running an ALTER WAREHOUSE command and changing the warehouse size?
+
+A. The warehouse size does not change until all queries currently running in the warehouse have completed.
+B. The warehouse size does not change until all queries currently in the warehouse queue have completed.
+C. The warehouse size does not change until the warehouse is suspended and restarted.
+D. It does not return from the command until the warehouse has finished changing its size.
+
+Ans: D
+
+348. Which of the following can be used when unloading data from Snowflake? (Choose two.)
+
+A. When unloading semi-structured data, it is recommended that the STRIP_OUTER_ARRAY option be used.
+B. Use the ENCODING file format option to change the encoding from the default UTF-8.
+C. The OBJECT_CONSTRUCT function can be used to convert relational data to semi-structured data.
+D. By using the SINGLE = TRUE parameter, a single file up to 5 GB in size can be exported to the storage layer.
+E. Use the PARSE_JSON function to ensure structured data will be unloaded into the VARIANT data type.
+
+Ans: CD
+
+349. What data is stored in the Snowflake storage layer? (Choose two.)
+
+A. Snowflake parameters
+B. Micro-partitions
+C. Query history
+D. Persisted query results
+E. Standard and secure view results
+
+Ans: BC
+
+350. A data provider wants to share data with a consumer who does not have a Snowflake account. The provider creates a reader account for the consumer following these steps:
+
+1. Created a user called "CONSUMER"
+2. Created a database to hold the share and an extra-small warehouse to query the data
+3. Granted the role PUBLIC the following privileges: Usage on the warehouse, database, and schema, and SELECT on all the objects in the share
+
+Based on this configuration what is true of the reader account?
+
+A. The reader account will automatically use the Standard edition of Snowflake.
+B. The reader account compute will be billed to the provider account.
+C. The reader account can clone data the provider has shared, but cannot re-share it.
+D. The reader account can create a copy of the shared data using CREATE TABLE AS...
+
+Ans: B
+
 
 
 
